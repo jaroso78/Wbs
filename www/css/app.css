@@ -1,0 +1,24 @@
+.navbar {
+	background: #2d4d73;
+}
+
+
+.navbar-brand { width: 45px; height: 45px; padding: 2%; margin: 0.5%; border-radius: 50%; background-size: 100% auto; -webkit-background-size: 100% auto; background-color:#aec7d2;}
+
+#icon_elec {background-color:#43ac5f; padding: 3%;  margin-left:1%;}
+
+#icon_gas {background-color:#f0000b; padding-left: 4%; padding-top: 3%; margin-left:1%;}
+
+#icon_tel {background-color:#43ac5f; padding-left: 2.5%; padding-top: 2%; margin-left:1%;}
+
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+
+	height: 50px;
+	background-color: #2d4d73;
+}
