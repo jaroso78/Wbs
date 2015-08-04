@@ -1,24 +1,67 @@
-.navbar {
-	background: #2d4d73;
-}
+/*************************************************************************************************************
+ autor: JAVIER RODRÍGUEZ SOLER.
+ V 0.1
+ 08/2015
+**************************************************************************************************************/
+
+/*--------------------------------------------------------COMMONS----------------------------------------------------------------------------------*/
+.pantalla {display : none;}
+.pantalla.activa {display : block;}
 
 
+
+/*-----------------------------------------------------NAVBAR HEADER-------------------------------------------------------------------------------*/
+.navbar {background: #2d4d73;}
 .navbar-brand { width: 45px; height: 45px; padding: 2%; margin: 0.5%; border-radius: 50%; background-size: 100% auto; -webkit-background-size: 100% auto; background-color:#aec7d2;}
+/*Principal Menu*/
+.navbar-toggle { width: 18px; height: 42px; position: absolute; top: 5px; right: 18px; padding: 0; border: 0; margin: 0; border-color:white !important;}
+
 
 #icon_elec {background-color:#43ac5f; padding: 3%;  margin-left:1%;}
-
-#icon_gas {background-color:#f0000b; padding-left: 4%; padding-top: 3%; margin-left:1%;}
-
-#icon_tel {background-color:#43ac5f; padding-left: 2.5%; padding-top: 2%; margin-left:1%;}
-
+#icon_gas {background-color:#f0000b; padding-left: 5%; padding-top: 3%; margin-left:1%;}
+#icon_tel {background-color:#43ac5f; padding-left: 2.5%; padding-top: 1.5%; margin-left:1%;}
+#icon_euro {background-color:#43ac5f; padding-left: 2.5%; padding-top: 1.5%; margin-left:1%;}
 
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	/* Set the fixed height of the footer here */
+/*---------------------------------------------------------BOODIE-------------------------------------------------------------------------------*/
+/*------------PRINCIPAL*------------------*/
+.principal h5{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:5%;}
+.principal h2{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:5%;margin-top: 15%; color:aquamarine;}
+.principal h4{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:25%;margin-top: 45%; color:aquamarine;text-align: right;}
+.principal span{margin-top: 95%; border: 3px solid greenyellow;border-radius: 50%; background-size: 100% 100%; -webkit-background-size: 100% 100%; background-color:transparent;}
+.principal .lista span{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent;}
+.principal .lista span a{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent; margin-right:50px}
+.glyphicon-arrow-down{margin-top:5px; color:greenyellow;font-size: 40px;}
 
-	height: 50px;
-	background-color: #2d4d73;
-}
+
+
+.principal .lista ul { list-style: none outside none; padding: 0;margin: 0 0 20px; background-color: rgba(255,255,255,.94); }
+.principal .lista li { padding: 7px; }
+.principal .lista li:first-child { border-top: 0; }
+.principal .lista li {border:0px; border-bottom: 1px solid rgb(200, 200, 200); margin-top: 5%;-moz-border-radius: 0px;-webkit-border-radius: 0px;
+	border-radius: 0px;padding: 0px;text-align: left;margin-top: 5px;color:aquamarine;}
+.glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 25%;}
+.principal .lista .marca_negativa{color:red;}
+
+
+.principal .btn {align-items: center;}
+
+
+.principal .recomendaciones h5 {margin-top:15%; color:blue; text-decoration: underline;border:0px;}
+
+/*-----
+.principal .lista h4{border:0px; border-bottom: 1px solid rgb(200, 200, 200); margin-top: 5%;-moz-border-radius: 0px;-webkit-border-radius: 0px;
+	border-radius: 0px;padding: 0px;text-align: left;margin-top: 5px;}
+.principal .lista span{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent;}
+
+.glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-left:-25px;}
+-----*/
+
+/*-----------------------------------------------------NAVBAR FOOTER--------------------------------------------------------------------------------*/
+.footer {position: absolute; bottom: 0; width: 100%; height: 50px; background-color: #2d4d73;} /*MODIFICAR HEIGHT PARA TAMAÑO DEL FOOTER*/
+.footer .navbar-brand { width: 45px; height: 45px; padding: 2%; padding-top: 0%; margin: 0%; background-size: 100% auto; -webkit-background-size: 100% auto;background-color: transparent;}
+.footer h2{margin-top: 10px; margin-left: 20%; color: white;padding-bottom: 2%;}
+.footer #icon_elec {padding: 3%;  margin-left:45%;background-color: transparent;}

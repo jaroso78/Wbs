@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Bootstrap 101 Template</title>
+	<title>WbS</title>
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,9 +23,21 @@
 </head>
 
 <body>
+
+
+<!-----------------------------------------------NAVBAR MENU------------------------------------------------------------------------------------------>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
+			<!-- MENU BUTTON -->
+			<button id="button_login" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- LAST ICONS-->
 			<a class="navbar-brand" href="#home"><img src="img/Casa_azul.png" class="img-responsive" />
 				</a>
 				<a  id= "icon_elec" class="navbar-brand" href="#home"><img src="img/Electricidad_relleno_blanco.png" class="img-responsive" />
@@ -34,22 +46,128 @@
 				</a>
 				<a id="icon_tel" class="navbar-brand" href="#home"><img src="img/Telefonia_blanco.png" class="img-responsive" />
 				</a>
-
+				<a id="icon_euro" class="navbar-brand" href="#home"><img src="img/Euro_blanco.png" class="img-responsive" />
+				</a>
 			</div>
 		</div>
 	</nav>
-	<h1>Hello, world!</h1>
 
+
+<!----------------------------------------------------BODIE------------------------------------------------------------------------------------------>
+
+
+<!---------------------------------------------Principal Window--------------------------------------------------------------------------------------->
+<div class="principal">
+	<section class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-7">
+
+						<h5>15 Julio 2015</h5>
+						</div>
+					</div>
+					<div class="row"></div>
+					<div class="row">
+						<div class="col-xs-7">
+							<h2>2.534€</h2>
+						</div>
+						<div class="col-xs-2">
+							<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-3">
+							<h4>1.2%</h4>
+						</div>
+					</div>
+					<div class="row"></div>
+					<div class="row lista">
+						<div class="col-xs-12">
+
+							<ul class="listado">
+								<li>
+									<strong>Piso Valencia: 280€        1.5% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li class="marca_negativa">
+									<strong>Chalet Cheste: 190€        0.5% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li>
+									<strong>Cafe Valencia: 2164€ 0.3% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+							</ul>
+
+							<!--h4>Piso Valencia: 280€        1.5%
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+						</div>
+
+
+						<div class="col-xs-12">
+							<h4>Chalet Cheste: 190€         0.5%
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+						</div>
+
+
+						<div class="col-xs-12">
+							<h4>Calle Valencia: 2.164€      0.3%
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+						</div-->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						 <button class="btn btn-default btn-lg" type="button"  aria-haspopup="true" aria-expanded="false">
+						 Compara
+						</button>
+					</div>
+				</div>
+				<div class="row"></div>
+				<div class="row recomendaciones">
+					<div class="col-xs-12 text-center">
+						<h5>Tienes <strong>5</strong> recomendaciones pendientes</h5>
+					</div>
+				</div>
+		</div>
+	</section>
+</div>
+
+
+<div class="principal pantalla">
+	<section class="content">
+
+	Es una prueba
+	</section>
+</div>
+
+
+
+<!-----------------------------------------------FOOTER -------------------------------------------------------------------------------------------->
 	<div class="footer">
-		<h1>WbS</h1>
+
+
+
+                 <a class="navbar-brand" href="#">
+                 	<h2>WbS</h2>
+                 </a>
+                 <a id= "icon_elec" class="navbar-brand" href="#">
+                  	 <img src="img/Electricidad_trazado_blanco.png" class="img-responsive" />
+      			 </a>
+
+
+
 	</div>
 
 </body>
 
+
+
+<!-------------------------------------------- JAVASCRIPT lIBRARIES LOADED ---------------------------------------------------------------------------------!>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
+<!--script src="cordova.js"></script-->
+
 
 </html>
