@@ -19,7 +19,30 @@ var controlador = {
 		var self = this;
 		   this._$Botton_login.click(function(evt) {
 
-			   $('#login').animate({"right":"100%"},"slow").addClass('visible')
+
+
+			   if ($('#login').css('display')=='none'){
+				  $('#login').animate({'width':'show'},1000, function(){
+
+					$('.segundaria').addClass('activa');
+				  	$('.segundaria').fadeIn();
+
+				  });
+
+
+			   }else{
+				   $('#login').animate({'width':'hide'},1000);
+
+
+			   }
+
+			   /* $('.activa').fadeOut();
+			   $('.activa').removeClass('activa');
+
+			   $('#login').addClass('activa');
+			   $('#login').fadeIn(); */
+			     console.log("pulsado");
+			  /* $('#login').animate({"screenLeft":"1000px"},"slow").addClass('activa');*/
 
 			/*self._mostrarPantalla(self._$Secundaria);*/
 	 	});
