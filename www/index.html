@@ -63,10 +63,14 @@
 				</a>
 				<a id="icon_gas" class="navbar-brand" href="#home"><img src="img/Gas_relleno_blanco.png" class="img-responsive" />
 				</a>
-				<a id="icon_tel" class="navbar-brand" href="#home"><img src="img/Telefonia_blanco.png" class="img-responsive" />
+				<a class="navbar-brand" href="#home">
+					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
 				</a>
-				<a id="icon_euro" class="navbar-brand" href="#home"><img src="img/Euro_blanco.png" class="img-responsive" />
+				<a class="navbar-brand" href="#home">
+					<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
 				</a>
+
+
 			</div>
 		</div>
 	</nav>
@@ -93,7 +97,7 @@
 							<h2>2.534€</h2>
 						</div>
 						<div class="col-xs-2">
-							<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>
 						</div>
 						<div class="col-xs-3">
 							<h4>1.2%</h4>
@@ -134,22 +138,73 @@
 		<div class="row-fluid">
 			<div class="col-xs-12">
 				<strong>Piso Valencia:  280€         1.5% </strong>
-				<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				<a id="boton2_vivienda"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-112 text-center">
+			<div id="grafica_detail_home" class="col-xs-12 text-center">
 				<div id="canvas-holder">
-					<canvas id="chart-area2" width="200" height="200"/>
+					<canvas id="chart-line" width="250" height="250"/>
 				</div>
 			</div>
 		</div>
 
 	</div>
+
+
+	<!---------------------------------------------Principal ELECTRICIDAD------------------------------------------------------>
+	<div class="principal_electricidad pantalla">
+					<div class="row"></div>
+					<div class="row">
+						<div class="col-xs-7">
+							<h2>1.455€</h2>
+						</div>
+						<div class="col-xs-2">
+							<span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-3">
+							<h4>2.2%</h4>
+						</div>
+					</div>
+					<div class="row"></div>
+						<div class="row lista">
+							<div class="col-xs-12">
+								<ul class="listado">
+									<li>
+										<strong>Piso Valencia:  280€         1.5% </strong>
+										<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</li>
+									<li class="marca_negativa">
+										<strong>Chalet Cheste: 190€        0.5% </strong>
+										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</li>
+									<li class="marca_negativa">
+										<strong>Cafe Valencia: 264€ 0.3% </strong>
+										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</li>
+								</ul>
+
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
+							Compara
+								</button>
+							</div>
+						</div>
+						<div class="row"></div>
+	</div>
+
+
+
+
+
 <!----------------------------------------------------------------------------------------------->
 					<div class="row recomendaciones">
 						<div class="col-xs-12 text-center">
-							<h5>Tienes <strong>5</strong> recomendaciones pendientes</h5>
+							<h5>Tienes <strong>3</strong> recomendaciones pendientes</h5>
 						</div>
 					</div>
 				</div>
@@ -219,13 +274,13 @@
 
 
 
-<div id ="Carousel-graficas" class="carousel slide" data-ride="carousel">
+	<div id ="Carousel-graficas" class="carousel slide" data-ride="carousel">
 
-	<ol class="carousel-indicators">
+	<!--<ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        </ol> -->
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div id ="grafica1" class="item active">
@@ -251,7 +306,7 @@
 				<div class="row">
 					<div class="col-xs-112 text-center">
 						<div id="canvas-holder">
-							<canvas id="chart-line" width="200" height="200"/>
+							<canvas id="chart-line1" width="250" height="250"/>
 						</div>
 					</div>
 				</div>
@@ -259,14 +314,19 @@
             <div class="item">
                  <div class="row">
 					<div class="col-xs-112 text-center">
-						<h4>Estimación anual</h4>
+						<h4>Consumo pendiente de facturar</h4>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-112 text-center">
 						<div id="canvas-holder">
-							<canvas id="chart-area" width="200" height="200"/>
+							<canvas id="chart-bar" width="200" height="200"/>
 						</div>
+					</div>
+				</div>
+           <div class="row">
+					<div class="col-xs-112 text-center">
+						<h4>Gasto estimado 457 €</h4>
 					</div>
 				</div>
             </div>
@@ -333,7 +393,49 @@
 
 
 
-	<!-----------------------------------------------FOOTER -------------------------------------------------------------------------------------------->
+<!---------------------------------------------RECOMENDACIONES DETALLE-------------------------------------------------->
+	<div id="recomendaciones_detalle" class="pantalla">
+		<div class="panel-group">
+   			<div class="panel panel-primary">
+   			<div class="panel-heading">
+   				 <h3 class="panel-title">Recomendación nº 1</h3>
+  			</div>
+    			<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue a eros rutrum viverra. Mauris turpis augue, ornare sit amet enim at</div>
+    			<div class="panel-footer">
+    				<a><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a>
+    				<a><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+    				<a><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a>
+
+
+    			</div>
+  			</div>
+  			<div class="panel panel-primary">
+   			<div class="panel-heading">
+   				 <h3 class="panel-title">Recomendación nº 2</h3>
+  			</div>
+    			<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue a eros rutrum viverra. Mauris turpis augue, ornare sit amet enim at</div>
+    			<div class="panel-footer">
+    				<a><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a>
+    				<a><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+    				<a><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a>
+    			</div>
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-xs-3"></div>
+  			<div class="col-xs-6 text-center">
+  				<button class="btn btn-lg btn-block btn-default full-width" type="button" aria-haspopup="true" aria-expanded="false">Ver más.
+					</button>
+  			</div>
+  			<div class="col-xs-3"></div>
+  		</div>
+
+	</div>
+
+
+
+
+<!----------------------------------------------FOOTER -------------------------------------------------------------------->
 	<div class="footer">
 
 
@@ -344,7 +446,12 @@
 		<a id="icon_elec" class="navbar-brand" href="#">
 			<img src="img/Electricidad_trazado_blanco.png" class="img-responsive" />
 		</a>
-
+	<a class="navbar-brand" href="#">
+		<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+	</a>
+	<a class="navbar-brand" href="#">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	</a>
 
 
 	</div>
