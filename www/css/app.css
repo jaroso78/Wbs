@@ -18,9 +18,15 @@
 .navbar-toggle { width: 18px; height: 42px; position: absolute; top: 5px; right: 18px; padding: 0; border: 0; margin: 0; border-color:white !important;}
 #icon_house {background-color: #aec7d2;}
 #icon_elec {background-color:#43ac5f; padding: 3%;  margin-left:1%;}
-#icon_gas {background-color:#f0000b; padding-left: 3.5%; padding-top: 2.5%; margin-left:1%;}
-.glyphicon-earphone{background-color:#43ac5f;color:#fff;padding-top: 2.5%;font-size: 24px;}
+#icon_gas {background-color:#f0000b; padding-left: 4.5%; padding-top: 2.5%; margin-left:1%;}
+#icon_agua {background-color:#43ac5f; padding-left: 4%;  margin-left:1%;}
+.glyphicon-earphone{background-color:#43ac5f;color:#fff;padding-left: 4.5%;padding-top: 2.5%;font-size: 24px;}
 .glyphicon-euro{background-color:#43ac5f;color:#fff;padding-top: 2.5%;font-size: 24px;}
+#telefono:hover{background-color:#43ac5f!important};
+#euro:hover{background-color:#43ac5f!important};
+#euro {background-color:#43ac5f!important};
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{background-color:#43ac5f!important};
+
 /*---------------------------------------------------------BOODIE-------------------------------------------------------------------------------*/
 /*------------PRINCIPAL*------------------*/
 .principal {padding-top: 20px;}
