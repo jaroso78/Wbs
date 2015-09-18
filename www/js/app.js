@@ -10,6 +10,16 @@
 console.log('Librería cargada.');
 
 
+var servicioFecha={
+	self: this,
+	_$Ventana_principal: $('.principal'),
+     meses : new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"),
+	_fecha: function(){
+	var f=new Date();
+    this._$Ventana_principal.find('#fecha').text(f.getDate() +" "+ this.meses[f.getMonth()] +" "+ f.getFullYear());
+	}
+}
+
 
 var servicioGraficas = {
 	self: this,
@@ -206,6 +216,7 @@ var controlador = {
 	_$Vista_pag_Elect: $('.principal_electricidad'),
 	_inicializarUI: function () {
 		var self = this;
+		servicioFecha._fecha();
 		this._$Botton_login.click(function (evt) {
 			$(this).toggleClass('open');
 			if ($('#login').css('display') == 'none') {
