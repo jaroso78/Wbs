@@ -214,6 +214,7 @@ var controlador = {
 	_$Botton_recomendaciones: $('.recomendaciones'),
 	_$Botton_pag_Elect: $('#icon_elec'),
 	_$Vista_pag_Elect: $('.principal_electricidad'),
+	_$Botton_modalBox: $('.glyphicon-ok-circle'),
 	_inicializarUI: function () {
 		var self = this;
 		servicioFecha._fecha();
@@ -256,9 +257,18 @@ var controlador = {
 			self._mostrarPantalla(self._$Recomendaciones_detalle);
 		});
 		this._$Botton_pag_Elect.click(function (evt){
-			console.log('pulsado sobre electricidad');
 			self._mostrarPantalla(self._$Ventana_principal);
 			self._mostrarDetalle(self._$Vista_pag_Elect);
+
+		});
+		this._$Botton_modalBox.click(function(evt){
+			console.log('Pulsado modal');
+			Custombox.open({
+        		target: '#modal',
+				effect: 'fadein',
+				overlayColor: '#f000',
+			});
+
 
 		});
 
