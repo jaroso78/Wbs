@@ -304,7 +304,7 @@ $(document).ready(function () {
 	//Definición Menu login lateral
 
 
-
+ document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 
 	/*servicioGraficas._graficaPie();*/
 
