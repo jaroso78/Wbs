@@ -38,20 +38,6 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<!-- MENU BUTTON -->
-
-
-				<!--
-			<button id="button_login" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            -->
-
-
 				<div id="button_login" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
 					<span></span>
 					<span></span>
@@ -71,8 +57,10 @@
 				</a>
 				<a id="icon_agua" class="navbar-brand" href="#home"><img src="img/Agua_relleno_blanco.png" class="img-responsive" />
 				</a>
-				<a id="euro" class="navbar-brand">
+				<!--a id="euro" class="navbar-brand">
 					<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+				</a-->
+				<a id="icon_euro" class="navbar-brand" href="#home"><img src="img/Euro_blanco.png" class="img-responsive" />
 				</a>
 
 
@@ -98,13 +86,13 @@
 				<div id="Wrapper_intern" class="detalle_activo">
 					<div class="row"></div>
 					<div class="row">
-						<div class="col-xs-7">
+						<div class="col-xs-7 text-center">
 							<h2>2.534€</h2>
 						</div>
 						<div class="col-xs-2">
 							<span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>
 						</div>
-						<div class="col-xs-3">
+						<div class="col-xs-3 text-center">
 							<h4>1.2%</h4>
 						</div>
 					</div>
@@ -161,13 +149,13 @@
 	<div class="principal_electricidad pantalla">
 					<div class="row"></div>
 					<div class="row">
-						<div class="col-xs-7">
+						<div class="col-xs-7 text-center">
 							<h2>1.455€</h2>
 						</div>
 						<div class="col-xs-2">
 							<span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
 						</div>
-						<div class="col-xs-3">
+						<div class="col-xs-3 text-center">
 							<h4>2.2%</h4>
 						</div>
 					</div>
@@ -276,9 +264,6 @@
 
 	<!---------------------------------------------COMPARADOR.--------------------------------------------------------------------------------------->
 	<div id="comparador" class="pantalla">
-
-
-
 	<div id ="Carousel-graficas" class="carousel slide" data-ride="carousel">
 
 	<!--<ol class="carousel-indicators">
@@ -297,7 +282,7 @@
 				<div class="row">
 					<div class="col-xs-112 text-center">
 						<div id="canvas-holder">
-							<canvas id="chart-area" width="200" height="200"/>
+							<canvas id="chart-area" width="250" height="250"/>
 						</div>
 					</div>
 				</div>
@@ -325,7 +310,7 @@
 				<div class="row">
 					<div class="col-xs-112 text-center">
 						<div id="canvas-holder">
-							<canvas id="chart-bar" width="200" height="200"/>
+							<canvas id="chart-bar" width="250" height="250"/>
 						</div>
 					</div>
 				</div>
@@ -453,7 +438,7 @@
 			<img src="img/Electricidad_trazado_blanco.png" class="img-responsive" />
 		</a>
 	<a class="navbar-brand" href="#">
-		<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+		<span  id="iconooff" class="glyphicon glyphicon-off" aria-hidden="true"></span>
 	</a>
 	<a class="navbar-brand" href="#">
 		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -507,6 +492,7 @@
 <script src="js/dist/Chart.js"></script>
 <script src="js/dist/custombox.js"></script>
 <script src="js/dist/legacy.js"></script>
+<script src="js/dist/statusbar.js"></script>
 <!--script src="cordova.js"></script-->
 
 

@@ -219,14 +219,18 @@ var controlador = {
 		var self = this;
 		servicioFecha._fecha();
 		this._$Botton_login.click(function (evt) {
+
 			$(this).toggleClass('open');
+
 			if ($('#login').css('display') == 'none') {
 				$('#login').animate({
 					'width': 'show'
 				}, 300, function () {
 					$('.segundaria').addClass('activa');
 					$('.segundaria').fadeIn();
+
 				});
+
 			} else {
 				$('.segundaria').fadeOut(100, function () {
 					$('.segundaria').removeClass('activa');
@@ -311,6 +315,7 @@ var controlador = {
 
 /******************************INICIO*******************************************************************/
 $(document).ready(function () {
+	StatusBar.backgroundColorByName("red");
 	//Definición Menu login lateral
  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 	controlador._inicializarUI();
