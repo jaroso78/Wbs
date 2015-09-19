@@ -327,6 +327,13 @@ $(document).ready(function () {
 $(document).onDeviceReady() {
 
 
+	 document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+
+	/*servicioGraficas._graficaPie();*/
+
+
+	controlador._inicializarUI();
+
 
             	// add any initialization code here
             }
