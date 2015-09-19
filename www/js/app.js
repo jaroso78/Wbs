@@ -315,7 +315,7 @@ var controlador = {
 
 /******************************INICIO*******************************************************************/
 $(document).ready(function () {
-	StatusBar.backgroundColorByName("red");
+
 	//Definición Menu login lateral
  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 	controlador._inicializarUI();
