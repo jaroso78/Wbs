@@ -26,6 +26,14 @@
 #euro:hover{background-color:#43ac5f!important};
 #euro {background-color:#43ac5f!important};
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{background-color:#43ac5f!important};
+.navbar-default{border-top:none;box-shadow: none;}
+.navbar-default {
+  border-color: #2d4d73;
+-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);
+
+}
 
 /*---------------------------------------------------------BOODIE-------------------------------------------------------------------------------*/
 /*------------PRINCIPAL*------------------*/
