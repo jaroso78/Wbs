@@ -323,3 +323,10 @@ $(document).ready(function () {
 
 
 });
+
+$(document).onDeviceReady() {
+
+
+
+            	// add any initialization code here
+            }
