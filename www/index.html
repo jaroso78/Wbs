@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimun-scale=1, user-scale=no" />
-	<!--meta name="viewport" content="width=device-width, initial-scale=1"--!>
+	<!--meta name="viewport" content="initial-scale=1, maximum-scale=1, minimun-scale=1, user-scale=no" -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>WbS</title>
 
@@ -190,6 +190,52 @@
 						<div class="row"></div>
 	</div>
 
+
+<!---------------------------------------------Principal EUROS------------------------------------------------------>
+
+	<div class="principal_euros pantalla">
+					<div class="row"></div>
+					<div class="row">
+						<div class="col-xs-7 text-center">
+							<h2>635 kW/h</h2>
+						</div>
+						<div class="col-xs-2">
+							<span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-3 text-center">
+							<h4>2.5%</h4>
+						</div>
+					</div>
+					<div class="row"></div>
+						<div class="row lista">
+							<div class="col-xs-12">
+								<ul class="listado">
+									<li>
+										<strong>Piso Valencia:  145kw/h         2.7% </strong>
+										<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</li>
+									<li class="marca_negativa">
+										<strong>Chalet Cheste: 201kw/h        2.1% </strong>
+										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</li>
+									<li class="marca_negativa">
+										<strong>Cafe Valencia: 289kw/h 1.8% </strong>
+										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</li>
+								</ul>
+
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
+							Compara
+								</button>
+							</div>
+						</div>
+						<div class="row"></div>
+	</div>
 
 
 
@@ -428,23 +474,18 @@
 
 <!----------------------------------------------FOOTER -------------------------------------------------------------------->
 	<div class="footer">
-
-
-
 		<a class="navbar-brand" href="#">
 			<h2>WbS</h2>
 		</a>
 		<a id="icon_elec" class="navbar-brand" href="#">
 			<img src="img/Electricidad_trazado_blanco.png" class="img-responsive" />
 		</a>
-	<a class="navbar-brand" href="#">
-		<span  id="iconooff" class="glyphicon glyphicon-off" aria-hidden="true"></span>
-	</a>
-	<a class="navbar-brand" href="#">
-		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-	</a>
-
-
+		<a class="navbar-brand" href="#">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		</a>
+		<a class="navbar-brand" href="#">
+			<span  id="iconooff" class="glyphicon glyphicon-off" aria-hidden="true"></span>
+		</a>
 	</div>
 
 
@@ -483,6 +524,7 @@
 
 
 <!-------------------------------------------- JAVASCRIPT lIBRARIES LOADED -------------------------------------->
+<!--script src="cordova.js"></script-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -492,7 +534,8 @@
 <script src="js/dist/Chart.js"></script>
 <script src="js/dist/custombox.js"></script>
 <script src="js/dist/legacy.js"></script>
-<!--script src="cordova.js"></script-->
+<script src="js/dist/native.history.js"></script>
+
 
 
 </html>

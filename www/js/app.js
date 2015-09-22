@@ -10,6 +10,58 @@
 console.log('Librería cargada.');
 
 
+
+
+
+
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var servicioFecha={
 	self: this,
 	_$Ventana_principal: $('.principal'),
@@ -215,6 +267,9 @@ var controlador = {
 	_$Botton_pag_Elect: $('#icon_elec'),
 	_$Vista_pag_Elect: $('.principal_electricidad'),
 	_$Botton_modalBox: $('.glyphicon-ok-circle'),
+	_$Botton_pag_Euros: $('#icon_euro'),
+	_$Vista_pag_Euros : $('.principal_euros'),
+
 	_inicializarUI: function () {
 		var self = this;
 		servicioFecha._fecha();
@@ -266,7 +321,7 @@ var controlador = {
 
 		});
 		this._$Botton_modalBox.click(function(evt){
-			console.log('Pulsado modal');
+
 			Custombox.open({
         		target: '#modal',
 				effect: 'fadein',
@@ -274,6 +329,11 @@ var controlador = {
 			});
 
 
+		});
+		this._$Botton_pag_Euros.click(function(evt){
+			console.log('Pulsado elect');
+			self._mostrarPantalla(self._$Ventana_principal);
+			self._mostrarDetalle(self._$Vista_pag_Euros);
 		});
 
 
@@ -293,6 +353,7 @@ var controlador = {
 				}
 			});
 		});
+		 /*self._navegar($pantallaDestino);*/
 	},
 	_mostrarDetalle: function ($detalleDestino) {
 		var self = this;
@@ -309,6 +370,15 @@ var controlador = {
 
 	},
 
+	/***************FUNCIÓN NAVEGAR********************************/
+	_navegar : function($pantalla) {
+        /*var id = $pantalla.attr('id');
+        var titulo = 'SI o NO :: ' + id;
+        var url = id;*/
+
+        /*History.pushState($pantalla, 'prueba', $pantalla);*/
+    }
+
 }
 
 
@@ -316,10 +386,14 @@ var controlador = {
 /******************************INICIO*******************************************************************/
 $(document).ready(function () {
 
+	app.initialize();
+
+	/*  document.addEventListener('backbutton', backButtonCallback, false);*/
 	//Definición Menu login lateral
  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 	controlador._inicializarUI();
-
 });
+
+
 
 
