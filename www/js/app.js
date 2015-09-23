@@ -269,7 +269,8 @@ var controlador = {
 	_$Botton_modalBox: $('.glyphicon-ok-circle'),
 	_$Botton_pag_Euros: $('#icon_euro'),
 	_$Vista_pag_Euros : $('.principal_euros'),
-
+	_$Bottom_recomendacion_detalle : $('#bottom_recomendaciones_detallada'),
+	_$Vista_pag_recomendaciones_detalle : $('#principal_recomendaciones'),
 	_inicializarUI: function () {
 		var self = this;
 		servicioFecha._fecha();
@@ -331,11 +332,17 @@ var controlador = {
 
 		});
 		this._$Botton_pag_Euros.click(function(evt){
-			console.log('Pulsado elect');
 			self._mostrarPantalla(self._$Ventana_principal);
 			self._mostrarDetalle(self._$Vista_pag_Euros);
 		});
 
+		this._$Bottom_recomendacion_detalle.click(function(evt){
+
+			console.log('Recomendaciones');
+            self._mostrarPantalla(self._$Vista_pag_recomendaciones_detalle);
+			self._mostrarPantalla(self._$Vista_pag_Euros);
+
+		});
 
 	},
 	_mostrarPantalla: function ($pantallaDestino) {
