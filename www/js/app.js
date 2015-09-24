@@ -270,7 +270,8 @@ var controlador = {
 	_$Botton_pag_Euros: $('#icon_euro'),
 	_$Vista_pag_Euros : $('.principal_euros'),
 	_$Bottom_recomendacion_detalle : $('#bottom_recomendaciones_detallada'),
-	_$Vista_pag_recomendaciones_detalle : $('#principal_recomendaciones'),
+	_$Vista_pag_recomendaciones_detalle : $('.principal_recomendaciones'),
+	_$ScrollDetalle : $('#wrapper'),
 	_inicializarUI: function () {
 		var self = this;
 		servicioFecha._fecha();
@@ -338,13 +339,37 @@ var controlador = {
 
 		this._$Bottom_recomendacion_detalle.click(function(evt){
 
-			console.log('Recomendaciones');
-            self._mostrarPantalla(self._$Vista_pag_recomendaciones_detalle);
-			self._mostrarPantalla(self._$Vista_pag_Euros);
+
+			self._mostrarPantalla(self._$Vista_pag_recomendaciones_detalle);
+			self._cargarScroll(self._$ScrollDetalle);
+
+			/*self._mostrarPantalla(self._$Ventana_principal);*/
+
+
 
 		});
 
 	},
+
+	_cargarScroll: function($scrollDestino)
+	{
+		var Wrapper = new IScroll('#wrapper',{
+  zprobeType:  3,
+    mouseWheel: true,
+    scrollbars: true,
+    bounce: true,
+    keyBindings: true,
+     click: true,});
+		window.document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+			console.log('Scroll activo');
+}, false);
+
+        //document.addEventListener('DOMContentLoaded', loaded, false);
+
+	},
+
+
 	_mostrarPantalla: function ($pantallaDestino) {
 		var self = this;
 		var $pantallaOrigen = $('.activa');
@@ -393,14 +418,16 @@ var controlador = {
 /******************************INICIO*******************************************************************/
 $(document).ready(function () {
 
+
+
 	app.initialize();
 
+
 	/*  document.addEventListener('backbutton', backButtonCallback, false);*/
-	//Definición Menu login lateral
- document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+	  //Definición Menu login lateral
+
 	controlador._inicializarUI();
 });
-
 
 
 
