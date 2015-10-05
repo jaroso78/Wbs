@@ -31,7 +31,11 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        document.addEventListener("backbutton", function(e){
+    	console.log('Pulsado atras');
+}, false);
+		app.receivedEvent('deviceready');
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -41,6 +45,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+
 
         console.log('Received Event: ' + id);
     }
@@ -274,8 +279,13 @@ var controlador = {
 	_$ScrollDetalle : $('#wrapper'),
 	_$Botton_contratar1: $('#boton_contratar1'),
 	_$Botton_contratar2: $('#boton_contratar2'),
+	_$Botton_salir: $('#iconooff'),
 	_inicializarUI: function () {
 		var self = this;
+		document.addEventListener("backbutton", function(e){
+    		self._mostrarDetalle(self._$Detail_principal);
+	    	self._mostrarPantalla(self._$Ventana_principal);
+		}, false);
 		servicioFecha._fecha();
 		this._$Botton_login.click(function (evt) {
 
@@ -361,6 +371,40 @@ var controlador = {
 			self._abrirNavegador('http://www.eresenergia.com');
 
 		});
+
+				$('#Carousel-graficas').swipe({allowPageScroll:"none"});
+		$('#Carousel-graficas').swipe({
+
+			swipe:function(event, direction, distance,duration,fingerCount,fingerData){
+				if ((direction)=='left'){
+					$("#Carousel-graficas").carousel('prev');
+					servicioGraficas._graficaPie();
+					servicioGraficas._graficaLinea();
+					servicioGraficas._graficaBarra();
+				}
+				if ((direction)=='right'){
+					$("#Carousel-graficas").carousel('next');
+					servicioGraficas._graficaPie();
+					servicioGraficas._graficaLinea();
+					servicioGraficas._graficaBarra();
+				}
+			}
+		});
+
+		this._$Botton_salir.click(function(evt){
+
+
+			this.navigator.notification.confirm(
+              '¿Seguro que quieres cerrar la aplicación?', // mensaje a mostrar
+              self._exitFromApp, // callback a invocar cuando el botón es presionado
+              'Salir', // titulo de la ventana
+              'Cancelar,Si' // etiquetas de los botones
+           );
+
+
+
+
+		});
 	},
 
 	_cargarScroll: function($scrollDestino)
@@ -429,7 +473,12 @@ var controlador = {
 
 		window.open(encodeURI($pagina),'_system','location=yes');
 
-	}
+	},
+
+	_exitFromApp: function ($buttonIndex){
+            if (buttonIndex==2){ navigator.app.exitApp();}
+     }
+
 
 }
 
@@ -441,6 +490,7 @@ $(document).ready(function () {
 
 
 	app.initialize();
+
 
 
 	/*  document.addEventListener('backbutton', backButtonCallback, false);*/

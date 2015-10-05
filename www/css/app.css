@@ -84,9 +84,9 @@
 /*-----------------------------------------------VENTANA COMPARADOR-------------------------------------------------------------------------------*/
 #myChart {
     margin: auto;
-    width: 600px;
+    width: 100px;
 }
-
+#comparador .row{ margin-left:0px; margin-right:0px;}
 /*----------------------------------- VENTANA DETALLE RECOMENDACIONES------------------------------*/
 .glyphicon-ok-circle {color: forestgreen; font-size: 35px;}
 .glyphicon-remove-circle {color: crimson; font-size: 35px;}
