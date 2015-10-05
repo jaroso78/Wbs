@@ -272,6 +272,8 @@ var controlador = {
 	_$Bottom_recomendacion_detalle : $('#bottom_recomendaciones_detallada'),
 	_$Vista_pag_recomendaciones_detalle : $('.principal_recomendaciones'),
 	_$ScrollDetalle : $('#wrapper'),
+	_$Botton_contratar1: $('#boton_contratar1'),
+	_$Botton_contratar2: $('#boton_contratar2'),
 	_inicializarUI: function () {
 		var self = this;
 		servicioFecha._fecha();
@@ -349,6 +351,16 @@ var controlador = {
 
 		});
 
+		this._$Botton_contratar1.click(function(evt){
+
+			self._abrirNavegador('http://www.audaxenergia.com');
+
+		});
+		this._$Botton_contratar2.click(function(evt){
+
+			self._abrirNavegador('http://www.eresenergia.com');
+
+		});
 	},
 
 	_cargarScroll: function($scrollDestino)
@@ -409,7 +421,15 @@ var controlador = {
         var url = id;*/
 
         /*History.pushState($pantalla, 'prueba', $pantalla);*/
-    }
+    },
+
+
+	/*********************FUNCIÓN ABRIR NAVEGADOR*******************************/
+	_abrirNavegador : function ($pagina){
+
+		window.open(encodeURI($pagina),'_system','location=yes');
+
+	}
 
 }
 

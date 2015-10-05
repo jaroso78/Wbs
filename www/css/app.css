@@ -207,3 +207,28 @@
     display: inline;
 	width: 60px;
     }
+
+
+/**************************MEDIA QUERIES ****************************************/
+@media (max-width: 320px) {
+	body {	font-size: 12px;}
+	#icon_elec {background-color:#43ac5f; padding: 3%;  margin-left:0.5%;}
+	#icon_gas {background-color:#f0000b; padding-left: 4.5%; padding-top: 2.5%; margin-left:0.5%;}
+	#icon_agua {background-color:#f0000b; padding-left: 4%;  margin-left:0.5%;}
+	#icon_euro {background-color:#43ac5f; padding: 2.5%;  margin-left:0.5%;}
+	#button_login {right:0px !important;}
+	.principal {padding-top: 0px;}
+	.principal h4 {margin-top: 5%;padding-left: 0px!important;}
+	.principal h2 {margin-top: 3%;}
+	.principal span{margin-top: 5%;}
+	.principal .lista li {margin-top: -9px;}
+	.principal .recomendaciones h5 {margin-top: 0%;}
+	.footer #icon_elec {margin-left: 40%;}
+	canvas {width: 200px!important; height: 200px!important;}
+	#comparador h4  {font-size: 12px;}
+	#comparador button {font-size: 12px;}
+	#login {top: 15%;height: 68%;}
+	.principal_euros .glyphicon-chevron-right {padding-left: 15%;}
+
+
+}
