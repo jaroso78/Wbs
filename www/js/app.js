@@ -32,7 +32,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         document.addEventListener("backbutton", function(e){
-    	console.log('Pulsado atras');
+
 }, false);
 		app.receivedEvent('deviceready');
 
@@ -83,32 +83,44 @@ var servicioGraficas = {
 	myPie: null,
 	myLine: null,
 	myLine1: null,
+	myLine2: null,
+	myLine3:null,
 	myBar: null,
 	ctx: null,
 	ctx1: null,
 	ctx2: null,
 	ctx3: null,
+	ctx4: null,
 	data: null,
 	_graficaBarra : function (){
 		var data = {
-    	labels: ["January", "February", "March", "April", "May", "June", "July"],
+    	labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"],
     	datasets: [
         {
-            label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
+            label: "Vivienda 1",
+            fillColor: "rgba(250,187,220,0.5)",
+            strokeColor: "rgba(250,187,220,0.8)",
+            highlightFill: "rgba(250,187,220,0.75)",
+            highlightStroke: "rgba(250,187,220,1)",
             data: [65, 59, 80, 81, 56, 55, 40]
         },
         {
-            label: "My Second dataset",
+            label: "Vivienda 2",
             fillColor: "rgba(151,187,205,0.5)",
             strokeColor: "rgba(151,187,205,0.8)",
             highlightFill: "rgba(151,187,205,0.75)",
             highlightStroke: "rgba(151,187,205,1)",
             data: [28, 48, 40, 19, 86, 27, 90]
-        }
+        },
+			{
+			label: "Vivienda 3",
+            fillColor: "rgba(131,187,205,0.5)",
+            strokeColor: "rgba(131,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [28, 48, 40, 19, 86, 27, 90]
+
+			}
     	]
 		};
 			self.ctx3 = $('#chart-bar').get(0).getContext("2d");
@@ -126,37 +138,55 @@ var servicioGraficas = {
 
 		var pieData = [
 			{
-				value: 300,
+				value: 658,
 				color: "#F7464A",
 				highlight: "#FF5A5E",
-				label: "Red"
+				label: "Enero",
 				},
 			{
-				value: 50,
+				value: 546,
 				color: "#46BFBD",
 				highlight: "#5AD3D1",
-				label: "Green"
+				label: "Febrero"
 				},
 			{
-				value: 100,
+				value: 633,
 				color: "#FDB45C",
 				highlight: "#FFC870",
-				label: "Yellow"
+				label: "Marzo"
 				},
 			{
-				value: 40,
+				value: 374,
 				color: "#949FB1",
 				highlight: "#A8B3C5",
-				label: "Grey"
+				label: "Abril"
 				},
 			{
-				value: 120,
+				value: 18,
 				color: "#4D5360",
 				highlight: "#616774",
-				label: "Dark Grey"
-				}
+				label: "Mayo"
+				},
+			{
+				value: 4,
+				color: "#2B66D5",
+				highlight:"#BFD1F2",
+				label:"Junio"
+			}
 			];
 
+
+		//Definición para mostrar el valor de los datos de la Gráfica.
+		var options =
+    	{
+        	tooltipTemplate: "<%= value %>",
+			onAnimationComplete: function()
+        	{
+            	this.showTooltip(this.segments, true);
+        	},
+            tooltipEvents: [],
+           showTooltips: true
+    	}
 
 		if (destruimos == true) {
 			self.ctx.restore();
@@ -164,47 +194,39 @@ var servicioGraficas = {
 		} else {
 			self.ctx = $('#chart-area').get(0).getContext("2d");
 
-			self.myPie = new Chart(self.ctx).Pie(pieData);
+			self.myPie = new Chart(self.ctx).Pie(pieData,options);
 			$("#chart-area").css({
 				'width': '250',
 				'height': '250'
 			});
 		}
-
-
-
-
-
-
-		/*var ctx = document.getElementById("chart-area").getContext("2d");
-		window.myPie = new Chart(ctx).Pie(pieData);*/
 	},
 
 	_graficaLinea: function (destruimos) {
 		self = this;
 
 		data = {
-			labels: ["January", "February", "March", "April", "May", "June", "July"],
+			labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
 			datasets: [
 				{
-					label: "My First dataset",
+					label: "Consumo de Electricidad.",
 					fillColor: "rgba(220,220,220,0.2)",
 					strokeColor: "rgba(220,220,220,1)",
 					pointColor: "rgba(220,220,220,1)",
 					pointStrokeColor: "#fff",
 					pointHighlightFill: "#fff",
 					pointHighlightStroke: "rgba(220,220,220,1)",
-					data: [65, 59, 80, 81, 56, 55, 40]
+					data: [658, 546, 633, 374, 18, 4, 319,225,328,220,125,225]
         },
 				{
-					label: "My Second dataset",
+					label: "Consumo de Agua.",
 					fillColor: "rgba(151,187,205,0.2)",
 					strokeColor: "rgba(151,187,205,1)",
 					pointColor: "rgba(151,187,205,1)",
 					pointStrokeColor: "#fff",
 					pointHighlightFill: "#fff",
 					pointHighlightStroke: "rgba(151,187,205,1)",
-					data: [28, 48, 40, 19, 86, 27, 90]
+					data: [21, 45, 62, 77, 95, 101, 90,55,96,100,111,56]
         }
     ]
 		};
@@ -218,8 +240,10 @@ var servicioGraficas = {
 
 			self.ctx1 = $('#chart-line').get(0).getContext("2d");
 			self.ctx2 = $('#chart-line1').get(0).getContext("2d");
+			self.ctx4 = $('#chart-line3').get(0).getContext("2d");
 			self.myLine = new Chart(self.ctx1).Line(data);
 			self.myLine2= new Chart(self.ctx2).Line(data);
+			self.myLine3 = new Chart(self.ctx4).Line(data);
 			$("#chart-line").css({
 				'width': '250',
 				'height': '250'
@@ -228,6 +252,11 @@ var servicioGraficas = {
 				'width': '250',
 				'height': '250'
 			});
+			$("#chart-line3").css({
+				'width': '250',
+				'height': '250'
+			});
+
 		}
 	},
 
@@ -279,7 +308,11 @@ var controlador = {
 	_$ScrollDetalle : $('#wrapper'),
 	_$Botton_contratar1: $('#boton_contratar1'),
 	_$Botton_contratar2: $('#boton_contratar2'),
-	_$Botton_salir: $('#iconooff'),
+	_$Botton_salir: $('#iconexit'),
+	_$Botton_info: $('#iconinfo'),
+	_$Botton_detailelec : $('#boton1_electricidad'),
+	_$Vista_detailelec : $('#detail_elec'),
+	_$Botton_detailelec_return : $('#boton2_electricidad'),
 	_inicializarUI: function () {
 		var self = this;
 		document.addEventListener("backbutton", function(e){
@@ -332,6 +365,20 @@ var controlador = {
 		this._$Botton_pag_Elect.click(function (evt){
 			self._mostrarPantalla(self._$Ventana_principal);
 			self._mostrarDetalle(self._$Vista_pag_Elect);
+
+		});
+
+		//Boton de detalle del apartado eléctrico.
+		this._$Botton_detailelec.click(function (evt){
+
+			self._mostrarDetalle(self._$Vista_detailelec);
+
+		});
+
+		//Botor de return a electricidad desde el detalle.
+		this._$Botton_detailelec_return.click(function (evt){
+		    self._mostrarDetalle(self._$Vista_pag_Elect);
+			servicioGraficas._graficaLinea(true);
 
 		});
 		this._$Botton_modalBox.click(function(evt){
@@ -394,7 +441,9 @@ var controlador = {
 		this._$Botton_salir.click(function(evt){
 
 
-			this.navigator.notification.confirm(
+
+
+			navigator.notification.confirm(
               '¿Seguro que quieres cerrar la aplicación?', // mensaje a mostrar
               self._exitFromApp, // callback a invocar cuando el botón es presionado
               'Salir', // titulo de la ventana
@@ -405,7 +454,25 @@ var controlador = {
 
 
 		});
+
+		this._$Botton_info.click(function(evt){
+
+		  /*alertDismissed: function {
+            // do something
+           };
+
+			navigator.notification.alert(
+			'WbS ver: 0.5 Versión de Prueba',
+				alertDismissed,
+				'Información",
+				'Done'
+			);
+		*/
+		});
+
 	},
+
+
 
 	_cargarScroll: function($scrollDestino)
 	{
@@ -475,8 +542,11 @@ var controlador = {
 
 	},
 
+	/********************FUNCIÓN SALIR DE LA APLICACIÓN *****************************/
 	_exitFromApp: function ($buttonIndex){
-            if (buttonIndex==2){ navigator.app.exitApp();}
+            if ($buttonIndex==2){
+				navigator.app.exitApp();
+				}
      }
 
 
@@ -488,15 +558,10 @@ var controlador = {
 $(document).ready(function () {
 
 
-
 	app.initialize();
-
-
-
-	/*  document.addEventListener('backbutton', backButtonCallback, false);*/
-	  //Definición Menu login lateral
-
 	controlador._inicializarUI();
+
+
 });
 
 

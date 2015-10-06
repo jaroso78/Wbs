@@ -168,7 +168,7 @@
 								<ul class="listado">
 									<li>
 										<strong>Piso Valencia:  280€         1.5% </strong>
-										<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+										<a id="boton1_electricidad"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li class="marca_negativa">
 										<strong>Chalet Cheste: 190€     0.5% </strong>
@@ -193,6 +193,23 @@
 						<div class="row"></div>
 	</div>
 
+<!----------------------------------DETAIL ELECTRICIDAD-------------------------------------------------->
+	<div id="detail_elec" class="detalle_inactivo">
+		<div class="row-fluid">
+			<div class="col-xs-12">
+				<strong>Piso Valencia:  280€         1.5% </strong>
+				<a id="boton2_electricidad"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+			</div>
+		</div>
+		<div class="row">
+			<div id="grafica_detail_elec" class="col-xs-12 text-center">
+				<div id="canvas-holder">
+					<canvas id="chart-line3" width="250" height="250"/>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 <!---------------------------------------------Principal EUROS------------------------------------------------------>
 
@@ -449,7 +466,7 @@
 							<a><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a>
 						</div>
 						<div class="col-xs-3">
-   							<a><h5 id="bottom_recomendaciones_detallada">Información</h5></a>
+   							<a><h5>Información</h5></a>
    						</div>
    						<div class="col-xs-1">
    						</div>
@@ -460,7 +477,7 @@
    			<div class="panel-heading">
    				 <h3 class="panel-title">Recomendación nº 2</h3>
   			</div>
-    			<div class="panel-body"><strong>Cambio de iluminación:</strong> Si cambias las bombillas de 150W podrías tener un ahorro anual estimado de 23.4€ por bombilla</div>
+    			<div class="panel-body"><strong>Cambio de proveedor:</strong> Si cambias el proveedor de suministro ahorrarás un 20% en tu factura. </div>
     			<div class="panel-footer">
     				<div class="row">
     					<div class="col-xs-8">
@@ -469,7 +486,7 @@
 							<a><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a>
 						</div>
 						<div class="col-xs-3">
-   							<a><h5>Información</h5></a>
+   							<a><h5 id="bottom_recomendaciones_detallada">Información</h5></a>
    						</div>
    						<div class="col-xs-1">
    						</div>
@@ -491,7 +508,7 @@
 
 
 
-<!---------------------------------------------Principal ELECTRICIDAD---------------------------------------------------->
+<!---------------------------------------------Principal RECOMENDACIONES---------------------------------------------------->
 
 
 <div class="principal_recomendaciones pantalla">
@@ -541,10 +558,10 @@
 		<a id="icon_elec" class="navbar-brand" href="#">
 			<img src="img/Electricidad_trazado_blanco.png" class="img-responsive" />
 		</a>
-		<a class="navbar-brand" href="#">
+		<a id="iconinfo" class="navbar-brand" href="#">
 			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 		</a>
-		<a class="navbar-brand" href="#">
+		<a id ="iconexit" class="navbar-brand" href="#">
 			<span  id="iconooff" class="glyphicon glyphicon-off" aria-hidden="true"></span>
 		</a>
 	</div>

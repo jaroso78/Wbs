@@ -124,6 +124,16 @@
 .principal_electricidad .recomendaciones h5 {margin-top:15%; color:blue; text-decoration: underline;border:0px;}
 
 
+
+/*----------------------VENTANA DETALLE ELECTRICIDAD.-----------------------*/
+
+#detail_elec > div.row-fluid > div{ border-bottom: 1px solid rgb(200, 200, 200);}
+#detail_elec > div.row-fluid > div > strong{font-size: 1.3em;text-align: left;margin-top: 5px;color:aquamarine;  }
+#boton2_electricidad > span {margin-top: 0px; !important; border: 0px solid greenyellow; border-radius: 0%;}
+.glyphicon-chevron-left {padding-left : 15%;font-size: 20px;color: black;}
+#grafica_detail_elec {margin-top: 25px; margin-bottom: 2.2px;}
+
+
 /*------------------------------------ VISTA PRINCIPAL EUROS-------------------------------*/
 
 .principal_euros h2 {color: crimson !important;}
@@ -228,6 +238,7 @@
 	#comparador h4  {font-size: 12px;}
 	#comparador button {font-size: 12px;}
 	#login {top: 15%;height: 68%;}
+	#comparador .row{ margin-left:20px; margin-right:20px;}
 	.principal_euros .glyphicon-chevron-right {padding-left: 15%;}
 
 
