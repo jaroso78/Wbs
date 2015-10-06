@@ -424,13 +424,13 @@ var controlador = {
 
 			swipe:function(event, direction, distance,duration,fingerCount,fingerData){
 				if ((direction)=='left'){
-					$("#Carousel-graficas").carousel('prev');
+					$("#Carousel-graficas").carousel('next');
 					servicioGraficas._graficaPie();
 					servicioGraficas._graficaLinea();
 					servicioGraficas._graficaBarra();
 				}
 				if ((direction)=='right'){
-					$("#Carousel-graficas").carousel('next');
+					$("#Carousel-graficas").carousel('prev');
 					servicioGraficas._graficaPie();
 					servicioGraficas._graficaLinea();
 					servicioGraficas._graficaBarra();
