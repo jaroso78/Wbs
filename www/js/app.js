@@ -10,10 +10,7 @@
 console.log('Librería cargada.');
 
 
-
-
-
-
+/**********************APLICACIÓN APP DE CORDOVA INICIO DE LA MISMA UNA VEZ SE INICIA EL DISPOSITIVO******/
 var app = {
     // Application Constructor
     initialize: function() {
@@ -52,21 +49,9 @@ var app = {
 }
 
 
+/****************************************SERVICIO DE FECHAS*************************************************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Lee la fecha inicial del dispositivo para dibujarlo en pantalla.
 var servicioFecha={
 	self: this,
 	_$Ventana_principal: $('.principal'),
@@ -78,54 +63,53 @@ var servicioFecha={
 }
 
 
+/****************************************SERVICIO DE GRÁFICAS.*************************************************/
 var servicioGraficas = {
 	self: this,
+	//Definición de las diversas gráficas.
 	myPie: null,
 	myLine: null,
 	myLine1: null,
 	myLine2: null,
 	myLine3:null,
 	myBar: null,
+	//Definición de los contextos de las gráficas.
 	ctx: null,
 	ctx1: null,
 	ctx2: null,
 	ctx3: null,
 	ctx4: null,
 	data: null,
+
+	//Dibujando la gráfica de Barras.
 	_graficaBarra : function (){
 		var data = {
-    	labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"],
+    	labels: ["Enero", "Marzo", "Mayo", "Julio", "Septi", "Novie"],
     	datasets: [
         {
-            label: "Vivienda 1",
+            label: "Luz",
             fillColor: "rgba(250,187,220,0.5)",
             strokeColor: "rgba(250,187,220,0.8)",
             highlightFill: "rgba(250,187,220,0.75)",
             highlightStroke: "rgba(250,187,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
+            data: [524.11, 329.95, 234.18, 203.08, 236.82, 380.58]
         },
         {
-            label: "Vivienda 2",
+            label: "Gas",
             fillColor: "rgba(151,187,205,0.5)",
             strokeColor: "rgba(151,187,205,0.8)",
             highlightFill: "rgba(151,187,205,0.75)",
             highlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
-        },
-			{
-			label: "Vivienda 3",
-            fillColor: "rgba(131,187,205,0.5)",
-            strokeColor: "rgba(131,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
-
-			}
+            data: [219.35, 211.15, 73.91, 34.76, 26.51, 34.51]
+        }
     	]
+		};
+		var options_bar ={
+			 multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
 		};
 			self.ctx3 = $('#chart-bar').get(0).getContext("2d");
 
-			self.myBar = new Chart(self.ctx3).Bar(data);
+			self.myBar = new Chart(self.ctx3).Bar(data,options_bar);
 			$("#chart-bar").css({
 				'width': '250',
 				'height': '211'
@@ -133,53 +117,42 @@ var servicioGraficas = {
 
 	},
 
+	//Dibujando la gráfica de Pastel.
 	_graficaPie: function (destruimos) {
 
 
 		var pieData = [
 			{
-				value: 658,
+				value: 2663.77,
 				color: "#F7464A",
 				highlight: "#FF5A5E",
-				label: "Enero",
+				label: "Luz",
 				},
 			{
-				value: 546,
+				value: 600.19,
 				color: "#46BFBD",
 				highlight: "#5AD3D1",
-				label: "Febrero"
+				label: "Gas"
 				},
 			{
-				value: 633,
+				value: 1218.08,
 				color: "#FDB45C",
 				highlight: "#FFC870",
-				label: "Marzo"
+				label: "Agua"
 				},
 			{
-				value: 374,
+				value: 1210.43,
 				color: "#949FB1",
 				highlight: "#A8B3C5",
-				label: "Abril"
-				},
-			{
-				value: 18,
-				color: "#4D5360",
-				highlight: "#616774",
-				label: "Mayo"
-				},
-			{
-				value: 4,
-				color: "#2B66D5",
-				highlight:"#BFD1F2",
-				label:"Junio"
-			}
+				label: "Telecom"
+				}
 			];
 
 
 		//Definición para mostrar el valor de los datos de la Gráfica.
 		var options =
     	{
-        	tooltipTemplate: "<%= value %>",
+        	tooltipTemplate: "<%=label %> <%= value %>",
 			onAnimationComplete: function()
         	{
             	this.showTooltip(this.segments, true);
@@ -202,38 +175,43 @@ var servicioGraficas = {
 		}
 	},
 
+	//Gráfica de líneas.
 	_graficaLinea: function (destruimos) {
 		self = this;
 
-		data = {
-			labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+		var data = {
+			labels: ["Enero", "Marzo", "Mayo", "Julio","Septiem","Noviem"],
 			datasets: [
 				{
-					label: "Consumo de Electricidad.",
+					label: "Electricidad.",
 					fillColor: "rgba(220,220,220,0.2)",
 					strokeColor: "rgba(220,220,220,1)",
 					pointColor: "rgba(220,220,220,1)",
 					pointStrokeColor: "#fff",
 					pointHighlightFill: "#fff",
 					pointHighlightStroke: "rgba(220,220,220,1)",
-					data: [658, 546, 633, 374, 18, 4, 319,225,328,220,125,225]
+					data: [158.91, 133.17, 154.84, 64.38, 53.99, 110.29]
         },
 				{
-					label: "Consumo de Agua.",
+					label: "Gas.",
 					fillColor: "rgba(151,187,205,0.2)",
 					strokeColor: "rgba(151,187,205,1)",
 					pointColor: "rgba(151,187,205,1)",
 					pointStrokeColor: "#fff",
 					pointHighlightFill: "#fff",
 					pointHighlightStroke: "rgba(151,187,205,1)",
-					data: [21, 45, 62, 77, 95, 101, 90,55,96,100,111,56]
+					data: [219.35, 211.15, 73.91, 34.76, 26.51, 34.51]
         }
-    ]
-		};
+    	]};
+
+		var options_line ={
+			 multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
+		}
 
 		if (destruimos == true) {
 			self.ctx1.restore();
 			self.myLine = null;
+
 
 
 		} else {
@@ -241,9 +219,9 @@ var servicioGraficas = {
 			self.ctx1 = $('#chart-line').get(0).getContext("2d");
 			self.ctx2 = $('#chart-line1').get(0).getContext("2d");
 			self.ctx4 = $('#chart-line3').get(0).getContext("2d");
-			self.myLine = new Chart(self.ctx1).Line(data);
-			self.myLine2= new Chart(self.ctx2).Line(data);
-			self.myLine3 = new Chart(self.ctx4).Line(data);
+			self.myLine = new Chart(self.ctx1).Line(data, options_line);
+			self.myLine2= new Chart(self.ctx2).Line(data, options_line);
+			self.myLine3 = new Chart(self.ctx4).Line(data, options_line);
 			$("#chart-line").css({
 				'width': '250',
 				'height': '250'
@@ -257,7 +235,11 @@ var servicioGraficas = {
 				'height': '250'
 			});
 
+
 		}
+		//legend(document.getElementById("legend_chart_line"), data);
+		//legend(document.getElementById("legend_chart_line2"), data);
+		//$('.legend_chart_line').append(self.myLine.generateLegend());
 	},
 
 
@@ -313,6 +295,9 @@ var controlador = {
 	_$Botton_detailelec : $('#boton1_electricidad'),
 	_$Vista_detailelec : $('#detail_elec'),
 	_$Botton_detailelec_return : $('#boton2_electricidad'),
+	_$Botton_login_facebook: $('#facebook-login'),
+	_$Botton_login_google: $('#google-login'),
+	_$Botton_entrada_login: $('#botton_login'),
 	_inicializarUI: function () {
 		var self = this;
 		document.addEventListener("backbutton", function(e){
@@ -354,6 +339,7 @@ var controlador = {
 		});
 		this._$Botton_detailhome.click(function (evt) {
 			self._mostrarDetalle(self._$Detail_home);
+
 		});
 		this._$Botton_detailreturn.click(function (evt) {
 			self._mostrarDetalle(self._$Detail_principal);
@@ -470,6 +456,22 @@ var controlador = {
 		*/
 		});
 
+		//Boton login de entrada -> Abre la pantalla home.
+		this._$Botton_entrada_login.click(function (evt){
+			self._mostrarDetalle(self._$Detail_principal);
+			self._mostrarPantalla(self._$Ventana_principal);
+		});
+		//Boton login del facebook ->Abre la pantalla home.
+		this._$Botton_login_facebook.click(function (evt){
+			self._mostrarDetalle(self._$Detail_principal);
+			self._mostrarPantalla(self._$Ventana_principal);
+		});
+		//Boton login del Google+ -> Abre la pantalla home.
+		this._$Botton_login_google.click(function(evt){
+			self._mostrarDetalle(self._$Detail_principal);
+			self._mostrarPantalla(self._$Ventana_principal);
+		});
+
 	},
 
 
@@ -551,7 +553,6 @@ var controlador = {
 
 
 }
-
 
 
 /******************************INICIO*******************************************************************/

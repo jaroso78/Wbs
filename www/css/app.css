@@ -9,6 +9,17 @@
 .pantalla.activa {display : block;}
 .detalle_activo{display : block;}
 .detalle_inactivo{display : none;}
+
+ /*Legenda de la gráfica.*/
+.legend {width: 15em !important;border: 1px solid black;}
+.legend .title {display: block;margin-bottom: 0.5em;line-height: 1.2em;padding: 0 0.3em;}
+.legend .color-sample {display: block;float: left;width: 1em;height: 1em;
+    border: 2px solid; /* Comment out if you don't want to show the fillColor */
+    border-radius: 0.5em; /* Comment out if you prefer squarish samples */
+    margin-right: 0.5em;
+}
+.legend span{margin-top: 5% !important;}
+
 /*-----------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------NAVBAR HEADER-----------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------*/
@@ -29,9 +40,21 @@
 .navbar-default{border-top:none;box-shadow: none;}
 .navbar-default {border-color: #2d4d73;-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);}
-/*---------------------------------------------------------BOODIE-------------------------------------------------------------------------------*/
+/*----------------------------------------------BOODIE----------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------LOGIN----------------------------------------------------------------*/
+
+.login{margin-top:12%;}
+.login .container-bottom {border-top:2px solid rgb(200, 200, 200)};
+.ico-fb {width: 10px;height: 17px;background-image: url();}
+.login #google-login {background-color: crimson;}
+
+
+
 /*------------PRINCIPAL*------------------*/
-.principal {padding-top: 20px;}
+.principal {padding-top: 0px;}
 .principal h5{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:5%;}
 .principal h2{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
@@ -50,7 +73,7 @@
 .principal .lista li:first-child { border-top: 0; }
 .principal .lista li {font-size: 1.3em; border:0px; border-bottom: 1px solid rgb(200, 200, 200); margin-top: 5%;-moz-border-radius: 0px;-webkit-border-radius: 0px;
 	border-radius: 0px;padding: 0px;text-align: left;margin-top: 5px;color:aquamarine;}
-.glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 25%;}
+.glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 12%;}
 .principal .lista .marca_negativa{color:red;}
 
 
@@ -58,7 +81,7 @@
 .principal .btn {align-items: center;}
 
 
-.principal .recomendaciones h5 {margin-top:12%; color:blue; text-decoration: underline;border:0px;}
+.principal .recomendaciones h5 {margin-top:5%; color:blue; text-decoration: underline;border:0px;}
 
 /*-----
 .principal .lista h4{border:0px; border-bottom: 1px solid rgb(200, 200, 200); margin-top: 5%;-moz-border-radius: 0px;-webkit-border-radius: 0px;
@@ -75,7 +98,10 @@
 #detail_home > div.row-fluid > div > strong{font-size: 1.3em;text-align: left;margin-top: 5px;color:aquamarine;  }
 #boton2_vivienda > span {margin-top: 0px; !important; border: 0px solid greenyellow; border-radius: 0%;}
 .glyphicon-chevron-left {padding-left : 15%;font-size: 20px;color: black;}
-#grafica_detail_home {margin-top: 25px; margin-bottom: 2.2px;}
+#grafica_detail_home {margin-top: 0px; margin-bottom: 1px;}
+
+
+
 /*------------------------------------------------VEMTAMA LOGIN------------------------------------------------------------------------------------*/
 .filalogin{padding-top: 45px; padding-bottom: 35px;}
 .segundaria .btn{margin-top: 15px;padding:15px;}
@@ -138,7 +164,7 @@
 
 .principal_euros h2 {color: crimson !important;}
 .principal_euros h4 {color: crimson !important;}
-.principal_euros .glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 18%;}
+.principal_euros .glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 1%;}
 
 /*--------------------------------------VENTANA DIALOGO-----------------------------------------*/
 #modal{background-color:#fff; width:300px; height: 100px; display:none; border-radius: 23px 23px 23px 23px;
@@ -239,7 +265,8 @@
 	#comparador button {font-size: 12px;}
 	#login {top: 15%;height: 68%;}
 	#comparador .row{ margin-left:20px; margin-right:20px;}
-	.principal_euros .glyphicon-chevron-right {padding-left: 15%;}
-
+	.principal .glyphicon-chevron-right {padding-left: 5%;}
+	.principal_euros .glyphicon-chevron-right {padding-left: 1%;}
+	.h2, h2 {font-size: 20px;}
 
 }

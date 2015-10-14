@@ -75,8 +75,59 @@
 	<!----------------------------------------------------BODIE------------------------------------------------------------------------------------------>
 
 
+<!---------------------------------------------------PANTALLA LOGIN ------------------------------------------------>
+
+<div class="login pantalla activa">
+	<div class="container">
+		<div class="row text-center">
+			<h3>Log In</h3>
+		</div>
+		<div class="row">
+			<div class="col-xs-2"></div>
+				<div class="col-xs-8">
+					<input type="text" class="form-control" placeholder="Email" required autofocus>
+				</div>
+			<div class="col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8">
+				<input type="password" class="form-control" placeholder="Password" required>
+			</div>
+			<div class="col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8">
+				<button  id="botton_login" class="btn btn-lg btn-primary btn-block" type="submit">
+                    Sign in</button>
+             </div>
+			<div class="col-xs-2"></div>
+		</div>
+		<div class="row text-center">
+			<p id="forgotPassword"><a href="">Forgot your password?</a></p>
+		</div>
+	</div>
+	<div class="container-bottom">
+		 <button type="button" name="facebook-login" id="facebook-login" class="btn btn-lg btn-primary btn-block" onclick="">
+
+                <i class="ico-fb"></i> <span id="loginFBText">Sign in With Facebook</span>
+
+            </button>
+             <button type="button" name="google-login" id="google-login" class="btn btn-lg btn-primary btn-block" onclick="">
+
+                <i class="ico-fb"></i> <span id="loginFBText">Sign in With Google+</span>
+
+            </button>
+	</div>
+</div>
+
+
+
+
+
 	<!---------------------------------------------Principal Window--------------------------------------------------------------------------------------->
-	<div class="principal pantalla activa">
+	<div class="principal pantalla">
 		<section class="content">
 			<div class="container-fluid">
 				<div class="row">
@@ -104,15 +155,15 @@
 							<div class="col-xs-12">
 								<ul class="listado">
 									<li id="boton1_vivienda">
-										<strong>Piso Valencia:  280€         1.5% </strong>
+										<strong>Vivienda1 - Calixto: 280€ 1.5% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li class="marca_negativa">
-										<strong>Chalet Cheste: 190€        0.5% </strong>
+										<strong>Vivienda2 - Eliana: &nbsp; 190€ 0.5% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li>
-										<strong>Cafe Valencia: 264€ 0.3% </strong>
+										<strong>Vivienda3 - Altea:  &nbsp;&nbsp;&nbsp;264€ 0.3% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 								</ul>
@@ -142,8 +193,12 @@
 				<div id="canvas-holder">
 					<canvas id="chart-line" width="250" height="250"/>
 				</div>
+				<!--div id="legend_chart_line" class="">
+
+				</div-->
 			</div>
 		</div>
+
 
 	</div>
 
@@ -167,15 +222,15 @@
 							<div class="col-xs-12">
 								<ul class="listado">
 									<li id="boton1_electricidad">
-										<strong>Piso Valencia:  280€         1.5% </strong>
+										<strong>Vivienda1 - Calixto:  280€         1.5% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li class="marca_negativa">
-										<strong>Chalet Cheste: 190€     0.5% </strong>
+										<strong>Vivienda2 - Eliana: &nbsp; 190€     0.5% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li class="marca_negativa">
-										<strong>Cafe Valencia: 264€ 0.3% </strong>
+										<strong>Vivienda3 - Altea:  &nbsp;&nbsp;&nbsp; 264€ 0.3% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 								</ul>
@@ -206,6 +261,9 @@
 				<div id="canvas-holder">
 					<canvas id="chart-line3" width="250" height="250"/>
 				</div>
+				<div id="legend_chart_line2" class="">
+
+				</div>
 			</div>
 		</div>
 
@@ -217,7 +275,7 @@
 					<div class="row"></div>
 					<div class="row">
 						<div class="col-xs-7 text-center">
-							<h2>635 kW/h</h2>
+							<h2>6973 KWh</h2>
 						</div>
 						<div class="col-xs-2">
 							<span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
@@ -231,15 +289,15 @@
 							<div class="col-xs-12">
 								<ul class="listado">
 									<li>
-										<strong>Piso Valencia: 145kw/h 2.7% </strong>
+										<strong>Vivienda1 - Calixto: 2552KWH 2.7% </strong>
 										<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li class="marca_negativa">
-										<strong>Chalet Cheste: 201kw/h 2.1% </strong>
+										<strong>Vivienda2 - Eliana: &nbsp 2217KWH 2.1% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 									<li class="marca_negativa">
-										<strong>Cafe Valencia: 289kw/h 1.8% </strong>
+										<strong>Vivienda3 - Altea:  &nbsp &nbsp 2204KWH 1.8% </strong>
 										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 									</li>
 								</ul>
@@ -364,7 +422,11 @@
 						<div id="canvas-holder">
 							<canvas id="chart-line1" width="250" height="250"/>
 						</div>
+
 					</div>
+					<div id="legend_chart_line2" class="">
+
+				        </div>
 				</div>
             </div>
             <div class="item">
@@ -378,11 +440,7 @@
 						<div id="canvas-holder">
 							<canvas id="chart-bar" width="250" height="250"/>
 						</div>
-					</div>
-				</div>
-           <div class="row">
-					<div class="col-xs-112 text-center">
-						<h4>Gasto estimado 457 €</h4>
+						<h4>Gasto estimado 450€ luz 29€ gas</h4>
 					</div>
 				</div>
             </div>
@@ -457,7 +515,27 @@
    			<div class="panel-heading">
    				 <h3 class="panel-title">Recomendación nº 1</h3>
   			</div>
-				<div class="panel-body"><strong>Cambio de equipamiento:</strong> Si cambias la lavadora podrías tener un ahorro anual estimado de 31.8 € </div>
+				<div class="panel-body"><strong>Cambia de tarifa ahorraras un 8%</div>
+    			<div class="panel-footer">
+    				<div class="row">
+    					<div class="col-xs-8">
+							<a><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a>
+							<a><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+							<a><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a>
+						</div>
+						<div class="col-xs-3">
+   							<a><h5 id="bottom_recomendaciones_detallada">Información</h5></a>
+   						</div>
+   						<div class="col-xs-1">
+   						</div>
+   					</div>
+				</div>
+  			</div>
+  			<div class="panel panel-primary">
+   			<div class="panel-heading">
+   				 <h3 class="panel-title">Recomendación nº 2</h3>
+  			</div>
+    			<div class="panel-body">Eficiencia usos eléctricos. 14% </div>
     			<div class="panel-footer">
     				<div class="row">
     					<div class="col-xs-8">
@@ -475,9 +553,9 @@
   			</div>
   			<div class="panel panel-primary">
    			<div class="panel-heading">
-   				 <h3 class="panel-title">Recomendación nº 2</h3>
+   				 <h3 class="panel-title">Recomendación nº 3</h3>
   			</div>
-    			<div class="panel-body"><strong>Cambio de proveedor:</strong> Si cambias el proveedor de suministro ahorrarás un 20% en tu factura. </div>
+    			<div class="panel-body">Salida a libre mercado de sum. gas un 4.17%</div>
     			<div class="panel-footer">
     				<div class="row">
     					<div class="col-xs-8">
@@ -494,14 +572,14 @@
 				</div>
   			</div>
   		</div>
-  		<div class="row">
+  		<!--div class="row">
   			<div class="col-xs-3"></div>
   			<div class="col-xs-6 text-center">
   				<button class="btn btn-lg btn-block btn-default full-width" type="button" aria-haspopup="true" aria-expanded="false">Ver más.
 					</button>
   			</div>
   			<div class="col-xs-3"></div>
-  		</div>
+  		</div-->
 
 
 	</div>
@@ -522,7 +600,7 @@
 
 					</div>
 					<div class="col-xs-6 text-center">
-						% anual de ahorro estimado es: <strong>3.06 €</strong>
+						% anual de ahorro estimado es: <strong>120,8 €</strong>
 					</div>
 					<div class="col-xs-4 text-center">
 						<button id ="boton_contratar1" class="btn btn-default full-width" style={"vertical-align : middle;"} type="button" aria-haspopup="true" aria-expanded="false">Contratar
@@ -535,7 +613,7 @@
 
 					</div>
 					<div class="col-xs-6 text-center">
-						% anual de ahorro estimado es: <strong>3.06 €</strong>
+						% anual de ahorro estimado es: <strong>114,5 €</strong>
 					</div>
 					<div class="col-xs-4 text-center">
 						<button id ="boton_contratar2" class="btn btn-default " type="button" aria-haspopup="true" aria-expanded="false">Contratar
@@ -615,6 +693,8 @@
 <script src="js/dist/native.history.js"></script>
 <script src="js/dist/iscroll.js"></script>
 <script src ="js/dist/jquery.touchSwipe.js"></script>
+<script src="js/dist/legend.js"></script>
+<script src="js/dist/legend.legacy.js"></script>
 
 
 
