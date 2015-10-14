@@ -20,7 +20,7 @@
 
 
 	<!--MODAL BOX -->
- 	<link href="css/custombox.css" rel="stylesheet">
+	<link href="css/custombox.css" rel="stylesheet">
 
 
 
@@ -55,7 +55,7 @@
 				</a>
 				<a id="icon_gas" class="navbar-brand" href="#home"><img src="img/Gas_relleno_blanco.png" class="img-responsive" />
 				</a>
-				<a  id="telefono" class="navbar-brand">
+				<a id="telefono" class="navbar-brand">
 					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
 				</a>
 				<a id="icon_agua" class="navbar-brand" href="#home"><img src="img/Agua_relleno_blanco.png" class="img-responsive" />
@@ -75,52 +75,65 @@
 	<!----------------------------------------------------BODIE------------------------------------------------------------------------------------------>
 
 
-<!---------------------------------------------------PANTALLA LOGIN ------------------------------------------------>
+	<!---------------------------------------------------PANTALLA LOGIN ------------------------------------------------>
 
-<div class="login pantalla activa">
-	<div class="container">
-		<div class="row text-center">
-			<h3>Log In</h3>
-		</div>
-		<div class="row">
-			<div class="col-xs-2"></div>
+	<div class="login pantalla activa">
+		<div class="container">
+			<div class="row text-center">
+				<h3>Log In</h3>
+			</div>
+			<div class="row">
+				<div class="col-xs-2"></div>
 				<div class="col-xs-8">
 					<input type="text" class="form-control" placeholder="Email" required autofocus>
 				</div>
-			<div class="col-xs-2"></div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2"></div>
-			<div class="col-xs-8">
-				<input type="password" class="form-control" placeholder="Password" required>
+				<div class="col-xs-2"></div>
 			</div>
-			<div class="col-xs-2"></div>
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-8">
+					<input type="password" class="form-control" placeholder="Password" required>
+				</div>
+				<div class="col-xs-2"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-8">
+					<button id="botton_login" class="btn btn-lg btn-primary btn-block" type="submit">
+						Sign in</button>
+				</div>
+				<div class="col-xs-2"></div>
+			</div>
+			<div class="row text-center">
+				<p id="forgotPassword"><a href="">Forgot your password?</a>
+				</p>
+			</div>
+		</div>
+		<div class="container-bottom">
+		<div class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10">
+				<button type="button" name="facebook-login" id="facebook-login" class="btn btn-lg btn-primary btn-block" onclick="">
+
+					<img src="img/fb.png" width="18" /> <span id="loginFBText">Sign in With Facebook</span>
+
+				</button>
+			</div>
+			<div class="col-xs-1"></div>
 		</div>
 		<div class="row">
-			<div class="col-xs-2"></div>
-			<div class="col-xs-8">
-				<button  id="botton_login" class="btn btn-lg btn-primary btn-block" type="submit">
-                    Sign in</button>
-             </div>
-			<div class="col-xs-2"></div>
-		</div>
-		<div class="row text-center">
-			<p id="forgotPassword"><a href="">Forgot your password?</a></p>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10">
+<button type="button" name="google-login" id="google-login" class="btn btn-lg btn-primary btn-block" onclick="">
+
+				<img src="img/gmailplus.png" width="17" /> <span id="loginFBText">Sign in With Google+</span>
+
+			</button>
+			</div>
+			<div class="col-xs-1"></div>
+			</div>
 		</div>
 	</div>
-	<div class="container-bottom">
-		 <button type="button" name="facebook-login" id="facebook-login" class="btn btn-lg btn-primary btn-block" onclick="">
-
-                <i class="ico-fb"></i> <span id="loginFBText">Sign in With Facebook</span>
-
-            </button>
-             <button type="button" name="google-login" id="google-login" class="btn btn-lg btn-primary btn-block" onclick="">
-
-                <i class="ico-fb"></i> <span id="loginFBText">Sign in With Google+</span>
-
-            </button>
-	</div>
-</div>
 
 
 
@@ -151,60 +164,60 @@
 						</div>
 					</div>
 					<div class="row"></div>
-						<div class="row lista">
-							<div class="col-xs-12">
-								<ul class="listado">
-									<li id="boton1_vivienda">
-										<strong>Vivienda1 - Calixto: 280€ 1.5% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-									<li class="marca_negativa">
-										<strong>Vivienda2 - Eliana: &nbsp; 190€ 0.5% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-									<li>
-										<strong>Vivienda3 - Altea:  &nbsp;&nbsp;&nbsp;264€ 0.3% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-								</ul>
+					<div class="row lista">
+						<div class="col-xs-12">
+							<ul class="listado">
+								<li id="boton1_vivienda">
+									<strong>Vivienda1 - Calixto: 280€ 1.5% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li class="marca_negativa">
+									<strong>Vivienda2 - Eliana: &nbsp; 190€ 0.5% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li>
+									<strong>Vivienda3 - Altea:  &nbsp;&nbsp;&nbsp;264€ 0.3% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+							</ul>
 
 
-							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-12 text-center">
-								<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
-							Compara
-								</button>
-							</div>
-						</div>
-						<div class="row"></div>
 					</div>
-<!----------------------------------DETAIL HOME-------------------------------------------------->
-	<div id="detail_home" class="detalle_inactivo">
-		<div class="row-fluid">
-			<div class="col-xs-12">
-				<strong>Piso Valencia:  280€         1.5% </strong>
-				<a id="boton2_vivienda"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
-			</div>
-		</div>
-		<div class="row">
-			<div id="grafica_detail_home" class="col-xs-12 text-center">
-				<div id="canvas-holder">
-					<canvas id="chart-line" width="250" height="250"/>
+					<div class="row">
+						<div class="col-xs-12 text-center">
+							<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
+								Compara
+							</button>
+						</div>
+					</div>
+					<div class="row"></div>
 				</div>
-				<!--div id="legend_chart_line" class="">
+				<!----------------------------------DETAIL HOME-------------------------------------------------->
+				<div id="detail_home" class="detalle_inactivo">
+					<div class="row-fluid">
+						<div class="col-xs-12">
+							<strong>Piso Valencia:  280€         1.5% </strong>
+							<a id="boton2_vivienda"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+						</div>
+					</div>
+					<div class="row">
+						<div id="grafica_detail_home" class="col-xs-12 text-center">
+							<div id="canvas-holder">
+								<canvas id="chart-line" width="250" height="250" />
+							</div>
+							<!--div id="legend_chart_line" class="">
 
 				</div-->
-			</div>
-		</div>
+						</div>
+					</div>
 
 
-	</div>
+				</div>
 
 
-	<!---------------------------------------------Principal ELECTRICIDAD------------------------------------------------------>
-	<div class="principal_electricidad pantalla">
+				<!---------------------------------------------Principal ELECTRICIDAD------------------------------------------------------>
+				<div class="principal_electricidad pantalla">
 					<div class="row"></div>
 					<div class="row">
 						<div class="col-xs-7 text-center">
@@ -218,60 +231,60 @@
 						</div>
 					</div>
 					<div class="row"></div>
-						<div class="row lista">
-							<div class="col-xs-12">
-								<ul class="listado">
-									<li id="boton1_electricidad">
-										<strong>Vivienda1 - Calixto:  280€         1.5% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-									<li class="marca_negativa">
-										<strong>Vivienda2 - Eliana: &nbsp; 190€     0.5% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-									<li class="marca_negativa">
-										<strong>Vivienda3 - Altea:  &nbsp;&nbsp;&nbsp; 264€ 0.3% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-								</ul>
+					<div class="row lista">
+						<div class="col-xs-12">
+							<ul class="listado">
+								<li id="boton1_electricidad">
+									<strong>Vivienda1 - Calixto:  280€         1.5% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li class="marca_negativa">
+									<strong>Vivienda2 - Eliana: &nbsp; 190€     0.5% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li class="marca_negativa">
+									<strong>Vivienda3 - Altea:  &nbsp;&nbsp;&nbsp; 264€ 0.3% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+							</ul>
 
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 text-center">
+							<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
+								Compara
+							</button>
+						</div>
+					</div>
+					<div class="row"></div>
+				</div>
+
+				<!----------------------------------DETAIL ELECTRICIDAD-------------------------------------------------->
+				<div id="detail_elec" class="detalle_inactivo">
+					<div class="row-fluid">
+						<div class="col-xs-12">
+							<strong>Piso Valencia:  280€         1.5% </strong>
+							<a id="boton2_electricidad"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+						</div>
+					</div>
+					<div class="row">
+						<div id="grafica_detail_elec" class="col-xs-12 text-center">
+							<div id="canvas-holder">
+								<canvas id="chart-line3" width="250" height="250" />
+							</div>
+							<div id="legend_chart_line2" class="">
 
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-12 text-center">
-								<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
-							Compara
-								</button>
-							</div>
-						</div>
-						<div class="row"></div>
-	</div>
-
-<!----------------------------------DETAIL ELECTRICIDAD-------------------------------------------------->
-	<div id="detail_elec" class="detalle_inactivo">
-		<div class="row-fluid">
-			<div class="col-xs-12">
-				<strong>Piso Valencia:  280€         1.5% </strong>
-				<a id="boton2_electricidad"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
-			</div>
-		</div>
-		<div class="row">
-			<div id="grafica_detail_elec" class="col-xs-12 text-center">
-				<div id="canvas-holder">
-					<canvas id="chart-line3" width="250" height="250"/>
-				</div>
-				<div id="legend_chart_line2" class="">
+					</div>
 
 				</div>
-			</div>
-		</div>
 
-	</div>
+				<!---------------------------------------------Principal EUROS------------------------------------------------------>
 
-<!---------------------------------------------Principal EUROS------------------------------------------------------>
-
-	<div class="principal_euros pantalla">
+				<div class="principal_euros pantalla">
 					<div class="row"></div>
 					<div class="row">
 						<div class="col-xs-7 text-center">
@@ -285,46 +298,46 @@
 						</div>
 					</div>
 					<div class="row"></div>
-						<div class="row lista">
-							<div class="col-xs-12">
-								<ul class="listado">
-									<li>
-										<strong>Vivienda1 - Calixto: 2552KWH 2.7% </strong>
-										<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-									<li class="marca_negativa">
-										<strong>Vivienda2 - Eliana: &nbsp 2217KWH 2.1% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-									<li class="marca_negativa">
-										<strong>Vivienda3 - Altea:  &nbsp &nbsp 2204KWH 1.8% </strong>
-										<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-									</li>
-								</ul>
+					<div class="row lista">
+						<div class="col-xs-12">
+							<ul class="listado">
+								<li>
+									<strong>Vivienda1 - Calixto: 2552KWH 2.7% </strong>
+									<a id="boton1_vivienda"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li class="marca_negativa">
+									<strong>Vivienda2 - Eliana: &nbsp 2217KWH 2.1% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+								<li class="marca_negativa">
+									<strong>Vivienda3 - Altea:  &nbsp &nbsp 2204KWH 1.8% </strong>
+									<a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</li>
+							</ul>
 
 
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 text-center">
-								<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
-							Compara
-								</button>
-							</div>
-						</div>
-						<div class="row"></div>
-	</div>
-
-
-
-
-<!----------------------------------------------------------------------------------------------->
-					<div class="row recomendaciones">
-						<div class="col-xs-12 text-center">
-							<h5>Tienes <strong>3</strong> recomendaciones pendientes</h5>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-xs-12 text-center">
+							<button id="btn_comparador" class="btn btn-default btn-lg" type="button" aria-haspopup="true" aria-expanded="false">
+								Compara
+							</button>
+						</div>
+					</div>
+					<div class="row"></div>
 				</div>
+
+
+
+
+				<!----------------------------------------------------------------------------------------------->
+				<div class="row recomendaciones">
+					<div class="col-xs-12 text-center">
+						<h5>Tienes <strong>3</strong> recomendaciones pendientes</h5>
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
 
@@ -388,64 +401,64 @@
 
 	<!---------------------------------------------COMPARADOR.--------------------------------------------------------------------------------------->
 	<div id="comparador" class="pantalla">
-	<div id ="Carousel-graficas" class="carousel slide" data-ride="carousel">
+		<div id="Carousel-graficas" class="carousel slide" data-ride="carousel">
 
-	<!--<ol class="carousel-indicators">
+			<!--<ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol> -->
-        <!-- Wrapper for carousel items -->
-        <div class="carousel-inner">
-            <div id ="grafica1" class="item active">
-               <div class="row">
-					<div class="col-xs-112 text-center">
-						<h4>Estimación mensual</h4>
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div id="grafica1" class="item active">
+					<div class="row">
+						<div class="col-xs-112 text-center">
+							<h4>Estimación mensual</h4>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-112 text-center">
-						<div id="canvas-holder">
-							<canvas id="chart-area" width="250" height="250"/>
+					<div class="row">
+						<div class="col-xs-112 text-center">
+							<div id="canvas-holder">
+								<canvas id="chart-area" width="250" height="250" />
+							</div>
 						</div>
 					</div>
 				</div>
-            </div>
-            <div class="item">
-                <div class="row">
-					<div class="col-xs-112 text-center">
-						<h4>Evolución anual</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-112 text-center">
-						<div id="canvas-holder">
-							<canvas id="chart-line1" width="250" height="250"/>
+				<div class="item">
+					<div class="row">
+						<div class="col-xs-112 text-center">
+							<h4>Evolución anual</h4>
 						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-112 text-center">
+							<div id="canvas-holder">
+								<canvas id="chart-line1" width="250" height="250" />
+							</div>
 
-					</div>
-					<div id="legend_chart_line2" class="">
-
-				        </div>
-				</div>
-            </div>
-            <div class="item">
-                 <div class="row">
-					<div class="col-xs-112 text-center">
-						<h4>Consumo pendiente de facturar</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-112 text-center">
-						<div id="canvas-holder">
-							<canvas id="chart-bar" width="250" height="250"/>
 						</div>
-						<h4>Gasto estimado 450€ luz 29€ gas</h4>
+						<div id="legend_chart_line2" class="">
+
+						</div>
 					</div>
 				</div>
-            </div>
-        </div>
-        <!-- Controls
+				<div class="item">
+					<div class="row">
+						<div class="col-xs-112 text-center">
+							<h4>Consumo pendiente de facturar</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-112 text-center">
+							<div id="canvas-holder">
+								<canvas id="chart-bar" width="250" height="250" />
+							</div>
+							<h4>Gasto estimado 450€ luz 29€ gas</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Controls
   <a  id="carousel-left" class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -455,11 +468,11 @@
     <span class="sr-only">Next</span>
   </a>
   -->
-</div>
+		</div>
 
 
 
-<!--
+		<!--
 		<div class="row">
 			<div class="col-xs-112 text-center">
 				<h4>Estimación mensual</h4>
@@ -484,37 +497,37 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-1">
-				</div>
-				<div class="col-xs-10 text-center">
-					<button class="btn btn-lg btn-block btn-default full-width" type="button" aria-haspopup="true" aria-expanded="false">
-						Familia
-					</button>
-				</div>
-				<div class="col-xs-1">
-				</div>
 			</div>
-			<div class="row">
+			<div class="col-xs-10 text-center">
+				<button class="btn btn-lg btn-block btn-default full-width" type="button" aria-haspopup="true" aria-expanded="false">
+					Familia
+				</button>
+			</div>
 			<div class="col-xs-1">
-				</div>
-				<div class="col-xs-10 text-center">
-					<button class="btn btn-lg btn-block btn-default full-width" type="button" aria-haspopup="true" aria-expanded="false">
-						Amigos
-					</button>
-				</div>
-				<div class="col-xs-1">
-				</div>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-1">
+			</div>
+			<div class="col-xs-10 text-center">
+				<button class="btn btn-lg btn-block btn-default full-width" type="button" aria-haspopup="true" aria-expanded="false">
+					Amigos
+				</button>
+			</div>
+			<div class="col-xs-1">
+			</div>
+		</div>
 	</div>
 
 
 
-<!---------------------------------------------RECOMENDACIONES DETALLE-------------------------------------------------->
+	<!---------------------------------------------RECOMENDACIONES DETALLE-------------------------------------------------->
 	<div id="recomendaciones_detalle" class="pantalla">
 		<div class="panel-group">
-   			<div class="panel panel-primary">
-   			<div class="panel-heading">
-   				 <h3 class="panel-title">Recomendación nº 1</h3>
-  			</div>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Recomendación nº 1</h3>
+				</div>
 				<div class="panel-body"><strong>Cambia de tarifa ahorraras un 8%</div>
     			<div class="panel-footer">
     				<div class="row">
@@ -601,34 +614,38 @@
 					</div>
 					<div class="col-xs-6 text-center">
 						% anual de ahorro estimado es: <strong>120,8 €</strong>
-					</div>
-					<div class="col-xs-4 text-center">
-						<button id ="boton_contratar1" class="btn btn-default full-width" style={"vertical-align : middle;"} type="button" aria-haspopup="true" aria-expanded="false">Contratar
+				</div>
+				<div class="col-xs-4 text-center">
+					<button id="boton_contratar1" class="btn btn-default full-width" style={ "vertical-align : middle;"} type="button" aria-haspopup="true" aria-expanded="false">Contratar
 					</button>
-					</div>
-			</div></li>
-					<li><div class="row">
+				</div>
+			</div>
+			</li>
+			<li>
+				<div class="row">
 					<div class="col-xs-2 text-center">
-						<a id="audax"><img src="img/eres-energia.png" class="tocenter" /></a>
+						<a id="audax"><img src="img/eres-energia.png" class="tocenter" />
+						</a>
 
 					</div>
 					<div class="col-xs-6 text-center">
 						% anual de ahorro estimado es: <strong>114,5 €</strong>
 					</div>
 					<div class="col-xs-4 text-center">
-						<button id ="boton_contratar2" class="btn btn-default " type="button" aria-haspopup="true" aria-expanded="false">Contratar
-					</button>
+						<button id="boton_contratar2" class="btn btn-default " type="button" aria-haspopup="true" aria-expanded="false">Contratar
+						</button>
 					</div>
-			</div></li>
+				</div>
+			</li>
 
-		</ul>
-	</div>
-</div>
-
-
+			</ul>
+		</div>
 	</div>
 
-<!----------------------------------------------FOOTER -------------------------------------------------------------------->
+
+	</div>
+
+	<!----------------------------------------------FOOTER -------------------------------------------------------------------->
 	<div class="footer">
 		<a class="navbar-brand" href="#">
 			<h2>WbS</h2>
@@ -639,13 +656,13 @@
 		<a id="iconinfo" class="navbar-brand" href="#">
 			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 		</a>
-		<a id ="iconexit" class="navbar-brand" href="#">
-			<span  id="iconooff" class="glyphicon glyphicon-off" aria-hidden="true"></span>
+		<a id="iconexit" class="navbar-brand" href="#">
+			<span id="iconooff" class="glyphicon glyphicon-off" aria-hidden="true"></span>
 		</a>
 	</div>
 
 
-<!---------------------------------Ventana modal--------------------------->
+	<!---------------------------------Ventana modal--------------------------->
 
 	<div id="modal">
 		<div class="row">
@@ -659,16 +676,20 @@
 		<div class="row">
 			<div class="col-xs-2"></div>
 			<div class="col-xs-2">
-				<a id="facebook"><img src="img/fb.png" class="img-responsive" sytle="with:50px" /></a>
+				<a id="facebook"><img src="img/fb.png" class="img-responsive" sytle="with:50px" />
+				</a>
 			</div>
 			<div class="col-xs-2">
-				<a id="twitter"><img src="img/icon_2.jpg" class="img-responsive" sytle="with:50px" /></a>
+				<a id="twitter"><img src="img/icon_2.jpg" class="img-responsive" sytle="with:50px" />
+				</a>
 			</div>
 			<div class="col-xs-2">
-				<a id="g+"><img src="img/icon_4.jpg" class="img-responsive" sytle="with:50px" /></a>
+				<a id="g+"><img src="img/icon_4.jpg" class="img-responsive" sytle="with:50px" />
+				</a>
 			</div>
 			<div class="col-xs-2">
-				<a id="g+"><img src="img/icon_6.jpg" class="img-responsive" sytle="with:50px" /></a>
+				<a id="g+"><img src="img/icon_6.jpg" class="img-responsive" sytle="with:50px" />
+				</a>
 			</div>
 			<div class="col-xs-2"></div>
 		</div>
@@ -692,7 +713,7 @@
 <script src="js/dist/legacy.js"></script>
 <script src="js/dist/native.history.js"></script>
 <script src="js/dist/iscroll.js"></script>
-<script src ="js/dist/jquery.touchSwipe.js"></script>
+<script src="js/dist/jquery.touchSwipe.js"></script>
 <script src="js/dist/legend.js"></script>
 <script src="js/dist/legend.legacy.js"></script>
 

@@ -47,10 +47,11 @@
 /*---------------------------------------------LOGIN----------------------------------------------------------------*/
 
 .login{margin-top:12%;}
-.login .container-bottom {border-top:2px solid rgb(200, 200, 200)};
-.ico-fb {width: 10px;height: 17px;background-image: url();}
+.login .container-bottom {margin-bottom: 15px; border-top:2px solid rgb(200, 200, 200);}
+.ico-fb {width: 20px;height: 20px;background-image: url("img\fb.png");}
 .login #google-login {background-color: crimson;}
-
+#facebook-login {background-color: #3b5998;margin-top: 15px;}
+#google-login {background-color: #db4a39;margin-top: 15px;}
 
 
 /*------------PRINCIPAL*------------------*/
