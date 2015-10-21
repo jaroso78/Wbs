@@ -52,6 +52,7 @@
 .login #google-login {background-color: crimson;}
 #facebook-login {background-color: #3b5998;margin-top: 15px;}
 #google-login {background-color: #db4a39;margin-top: 15px;}
+#twitter-login {background-color: #55acee; margin-top: 15px;}
 
 
 /*------------PRINCIPAL*------------------*/
@@ -59,13 +60,15 @@
 .principal h5{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:5%;}
 .principal h2{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
-	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:5%;margin-top: 15%; color:aquamarine;}
+	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:5%;margin-top: 5%; color:aquamarine;}
 .principal h4{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
-	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:25%;margin-top: 45%; color:aquamarine;text-align: left;}
-.principal span{margin-top: 95%; border: 0px; background-size: 100% 100%; -webkit-background-size: 100% 100%; background-color:transparent;}
+	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:25%;margin-top: 15%; color:aquamarine;text-align: left;}
+.principal h6{margin-top: 0px;  margin-bottom: 0px;}
+.principal span{margin-top: 35%; border: 0px; background-size: 100% 100%; -webkit-background-size: 100% 100%; background-color:transparent;}
 .principal .lista span{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent;}
 .principal .lista span a{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent; margin-right:50px}
 .glyphicon-circle-arrow-down{margin-top:15px; color:greenyellow;font-size: 50px;}
+.principal .cabecera_lista { border-bottom: 1px solid rgb(200, 200, 200); }
 
 
 
@@ -74,7 +77,7 @@
 .principal .lista li:first-child { border-top: 0; }
 .principal .lista li {font-size: 1.3em; border:0px; border-bottom: 1px solid rgb(200, 200, 200); margin-top: 5%;-moz-border-radius: 0px;-webkit-border-radius: 0px;
 	border-radius: 0px;padding: 0px;text-align: left;margin-top: 5px;color:aquamarine;}
-.glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 12%;}
+.glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 6%;}
 .principal .lista .marca_negativa{color:red;}
 
 
@@ -118,8 +121,8 @@
 .glyphicon-ok-circle {color: forestgreen; font-size: 35px;}
 .glyphicon-remove-circle {color: crimson; font-size: 35px;}
 .glyphicon-ban-circle  {color:darkorange; font-size: 35px;}
-
-
+.panel-group .panel+.panel {margin-top: 0px;}
+.panel-footer {padding: 0px 15px;}
 /*------------------------------------ VISTA PRINCIPAL ELECTRICIDAD--------------------------------*/
 
 .principal_electricidad h5{border:2px;border: 1px solid rgb(200, 200, 200);-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;
@@ -130,7 +133,7 @@
 	border-radius: 5px 5px 5px 5px;	letter-spacing: 1px; padding:25%;margin-top: 45%; color:crimson;text-align: left;}
 .principal_electricidad span{margin-top: 95%; border: 0px !important; background-size: 100% 100%; -webkit-background-size: 100% 100%; background-color:transparent;}
 .principal_electricidad .lista span{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent;}
-.principal_electricidad .lista span a{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent; margin-right:50px}
+.principal_electricidad .lista span a{text-align: left; margin-top: 15px; border: 0px;border-radius: 0%; background-size: 0%; -webkit-background-size: 0%; background-color:transparent; margin-right:20px}
 .glyphicon-circle-arrow-up {margin-top:15px; color:crimson;font-size: 50px;}
 
 
@@ -140,7 +143,7 @@
 .principal_electricidad .lista li:first-child { border-top: 0; }
 .principal_electricidad .lista li {font-size: 1.3em; border:0px; border-bottom: 1px solid rgb(200, 200, 200); margin-top: 5%;-moz-border-radius: 0px;-webkit-border-radius: 0px;
 	border-radius: 0px;padding: 0px;text-align: left;margin-top: 5px;color:aquamarine;}
-.principal_electricdad .glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 25%;}
+.principal_electricdad .glyphicon-chevron-right{color:black; margin-top:25px;font-size: 20px;padding-right:0px;padding-left: 5%;}
 .principal_electricidad .lista .marca_negativa{color:red;}
 
 
@@ -157,7 +160,7 @@
 #detail_elec > div.row-fluid > div{ border-bottom: 1px solid rgb(200, 200, 200);}
 #detail_elec > div.row-fluid > div > strong{font-size: 1.3em;text-align: left;margin-top: 5px;color:aquamarine;  }
 #boton2_electricidad > span {margin-top: 0px; !important; border: 0px solid greenyellow; border-radius: 0%;}
-.glyphicon-chevron-left {padding-left : 15%;font-size: 20px;color: black;}
+.glyphicon-chevron-left {padding-left : 5%;font-size: 20px;color: black;}
 #grafica_detail_elec {margin-top: 25px; margin-bottom: 2.2px;}
 
 
@@ -170,6 +173,20 @@
 /*--------------------------------------VENTANA DIALOGO-----------------------------------------*/
 #modal{background-color:#fff; width:300px; height: 100px; display:none; border-radius: 23px 23px 23px 23px;
 -moz-border-radius: 23px 23px 23px 23px;-webkit-border-radius: 23px 23px 23px 23px; border: 1px solid #000000;}
+
+/*-------------------------------------VENTANA DIALOGO 2----------------------------------------*/
+
+#modal2{background-color:#fff; width:300px; height: 50px;display:none;border-radius: 23px 23px 23px 23px;
+-moz-border-radius: 23px 23px 23px 23px;-webkit-border-radius: 23px 23px 23px 23px; border: 1px solid #000000;}
+.custombox-modal img {max-width: 50%!important; height: auto;}
+
+/*-------------------------------------VENTANA DIALOGO 3----------------------------------------*/
+
+#modal3{background-color:#fff; width:300px; height: 90px;display:none;border-radius: 23px 23px 23px 23px;
+-moz-border-radius: 23px 23px 23px 23px;-webkit-border-radius: 23px 23px 23px 23px; border: 1px solid #000000;}
+.custombox-modal img {max-width: 50%!important; height: auto;}
+
+#modal3 img {margin-top: 25%; max-width: 90%!important; height: auto;}
 
 /*-----------------------------------------------------NAVBAR FOOTER--------------------------------------------------------------------------------*/
 .footer {position: absolute; bottom: 0; width: 100%; height: 50px; background-color: #2d4d73;} /*MODIFICAR HEIGHT PARA TAMAÑO DEL FOOTER*/
@@ -264,10 +281,12 @@
 	canvas {width: 200px!important; height: 200px!important;}
 	#comparador h4  {font-size: 12px;}
 	#comparador button {font-size: 12px;}
-	#login {top: 15%;height: 68%;}
+	#login {top: 12%;height: 77.5%;}
 	#comparador .row{ margin-left:20px; margin-right:20px;}
-	.principal .glyphicon-chevron-right {padding-left: 5%;}
+	.principal .glyphicon-chevron-right {padding-left: 3%;}
 	.principal_euros .glyphicon-chevron-right {padding-left: 1%;}
 	.h2, h2 {font-size: 20px;}
+	.login{margin-top:0%;}
+	.login h3{ margin-top: -15px;}
 
 }

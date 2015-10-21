@@ -190,7 +190,7 @@ var servicioGraficas = {
 					pointStrokeColor: "#fff",
 					pointHighlightFill: "#fff",
 					pointHighlightStroke: "rgba(220,220,220,1)",
-					data: [158.91, 133.17, 154.84, 64.38, 53.99, 110.29]
+					data: [524.11, 329.95, 234.18, 203.08, 236.82, 380.58]
         },
 				{
 					label: "Gas.",
@@ -298,6 +298,7 @@ var controlador = {
 	_$Botton_login_facebook: $('#facebook-login'),
 	_$Botton_login_google: $('#google-login'),
 	_$Botton_entrada_login: $('#botton_login'),
+	_$Botton_login_twitter: $('#twitter-login'),
 	_inicializarUI: function () {
 		var self = this;
 		document.addEventListener("backbutton", function(e){
@@ -335,7 +336,6 @@ var controlador = {
 		this._$Botton_home.click(function (evt) {
 			self._mostrarDetalle(self._$Detail_principal);
 			self._mostrarPantalla(self._$Ventana_principal);
-
 		});
 		this._$Botton_detailhome.click(function (evt) {
 			self._mostrarDetalle(self._$Detail_home);
@@ -347,6 +347,11 @@ var controlador = {
 		});
 		this._$Botton_recomendaciones.click(function (evt){
 			self._mostrarPantalla(self._$Recomendaciones_detalle);
+			Custombox.open({
+        		target: '#modal3',
+				effect: 'fadein',
+				overlayColor: '#f000',
+			});
 		});
 		this._$Botton_pag_Elect.click(function (evt){
 			self._mostrarPantalla(self._$Ventana_principal);
@@ -460,16 +465,46 @@ var controlador = {
 		this._$Botton_entrada_login.click(function (evt){
 			self._mostrarDetalle(self._$Detail_principal);
 			self._mostrarPantalla(self._$Ventana_principal);
+			Custombox.open({
+        		target: '#modal2',
+				effect: 'fadein',
+				overlayColor: '#f000',
+			});
+
 		});
 		//Boton login del facebook ->Abre la pantalla home.
 		this._$Botton_login_facebook.click(function (evt){
 			self._mostrarDetalle(self._$Detail_principal);
 			self._mostrarPantalla(self._$Ventana_principal);
+			Custombox.open({
+        		target: '#modal2',
+				effect: 'fadein',
+				overlayColor: '#f000',
+			});
+
 		});
 		//Boton login del Google+ -> Abre la pantalla home.
 		this._$Botton_login_google.click(function(evt){
 			self._mostrarDetalle(self._$Detail_principal);
 			self._mostrarPantalla(self._$Ventana_principal);
+			Custombox.open({
+        		target: '#modal2',
+				effect: 'fadein',
+				overlayColor: '#f000',
+			});
+
+		});
+		//Boton login de Twitter -> Abre la pantalla home.
+		this._$Botton_login_twitter.click(function(evt){
+			self._mostrarDetalle(self._$Detail_principal);
+			self._mostrarPantalla(self._$Ventana_principal);
+			console.log('Pulsado twitter');
+			Custombox.open({
+        		target: '#modal2',
+				effect: 'fadein',
+				overlayColor: '#f000',
+			});
+
 		});
 
 	},
