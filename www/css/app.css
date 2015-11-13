@@ -46,7 +46,7 @@
 
 /*---------------------------------------------LOGIN----------------------------------------------------------------*/
 
-.login{margin-top:12%;}
+.login{margin-top:5%;}
 .login .container-bottom {margin-bottom: 15px; border-top:2px solid rgb(200, 200, 200);}
 .ico-fb {width: 20px;height: 20px;background-image: url("img\fb.png");}
 .login #google-login {background-color: crimson;}

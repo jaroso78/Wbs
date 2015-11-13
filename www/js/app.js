@@ -299,6 +299,8 @@ var controlador = {
 	_$Botton_login_google: $('#google-login'),
 	_$Botton_entrada_login: $('#botton_login'),
 	_$Botton_login_twitter: $('#twitter-login'),
+	_$Botton_telefono: $('#telefono'),
+	_$Vista_pag_telefono: $('.principal_telefono'),
 	_inicializarUI: function () {
 		var self = this;
 		document.addEventListener("backbutton", function(e){
@@ -385,6 +387,11 @@ var controlador = {
 		this._$Botton_pag_Euros.click(function(evt){
 			self._mostrarPantalla(self._$Ventana_principal);
 			self._mostrarDetalle(self._$Vista_pag_Euros);
+		});
+		//Boton de la vista teléfono
+		this._$Botton_telefono.click(function(evt){
+			self._mostrarPantalla(self._$Ventana_principal);
+			self._mostrarDetalle(self._$Vista_pag_telefono);
 		});
 
 		this._$Bottom_recomendacion_detalle.click(function(evt){
